@@ -1,0 +1,39 @@
+/* ---------- 12. Lists ---------- */
+.list {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--line-2);
+  transition: background 0.15s;
+}
+.list-row:first-child {
+  border-top: 0;
+}
+.list-row:hover {
+  background: var(--surface-2);
+}
+a.list-row:hover b:first-child {
+  color: var(--accent);
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+  font-size: 14px;
+}
+.info-row span:first-child {
+  color: var(--muted);
+}
+.session-info .info-row {
+  padding: 6px 0;
+}

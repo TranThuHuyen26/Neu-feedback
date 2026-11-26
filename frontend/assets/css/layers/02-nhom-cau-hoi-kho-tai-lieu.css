@@ -1,0 +1,171 @@
+/* ---------- 24. Vòng chỉnh sửa v3.1 ---------- */
+/* Nhóm câu hỏi tương đồng: đặt ngay đầu trang phiên */
+.sim-strip {
+  margin: 4px 0 18px;
+  padding: 18px;
+  border-radius: var(--r-lg);
+  background: linear-gradient(135deg, var(--accent-soft), #fff 75%);
+  border: 1.5px solid color-mix(in srgb, var(--accent) 25%, #fff);
+  animation: rise 0.6s var(--ease);
+}
+.sim-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.sim-head b {
+  font-size: 15.5px;
+}
+.sim-ico {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 12px;
+  background: var(--accent);
+  display: grid;
+  place-items: center;
+}
+.sim-ico svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffd166;
+}
+.sim-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.sim-grid .similar-group {
+  margin-top: 0;
+}
+.sim-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  background: var(--accent-soft);
+  color: var(--accent);
+  vertical-align: 1px;
+}
+.sim-note {
+  margin: -2px 0 12px !important;
+  font-size: 13px;
+  color: var(--accent);
+}
+/* Gửi trong NEU AI */
+.compose-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.compose-bar input {
+  flex: 1;
+}
+.compose-bar .send {
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 14px;
+}
+/* Kho tài liệu */
+.src-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.src-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s var(--ease);
+}
+.src-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.src-card.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.src-card b {
+  font-size: 15px;
+}
+.src-card span:last-child {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.src-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: 6px;
+}
+.file-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ftype {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 10.5px;
+  font-weight: 800;
+}
+.pill.scope-session {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.pill.scope-class {
+  background: #f1f3f8;
+  color: var(--ink-2);
+}
+/* Nội dung gắn cờ: gọn trong một màn hình */
+.trace-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--amber-soft);
+  border: 1px solid #f3ddb3;
+}
+.trace-card {
+  width: min(640px, 100%);
+}
+.moderation .detail .card {
+  padding: 16px;
+}
+@media (max-width: 960px) {
+  .sim-grid,
+  .src-summary {
+    grid-template-columns: 1fr;
+  }
+}
+.detail > p.sim-note b {
+  font-size: 13px;
+}
+.pagehead > div:first-child {
+  flex: 1 1 520px;
+}
+.pagehead > div:first-child p {
+  max-width: 760px;
+}

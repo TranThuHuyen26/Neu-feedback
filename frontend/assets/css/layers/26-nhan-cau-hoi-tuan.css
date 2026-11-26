@@ -1,0 +1,52 @@
+/* ===== v3.16: danh sách tuần — nhãn câu hỏi bấm được + nút hành động ===== */
+.wk-row {
+  grid-template-columns: 62px minmax(0, 1fr) 96px 170px 124px;
+}
+.wk-no,
+.wk-tl {
+  color: inherit;
+  text-decoration: none;
+}
+a.wk-q {
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 4px 6px;
+  margin: -4px -6px;
+}
+a.wk-q:hover {
+  background: #eef4f8;
+  text-decoration: underline;
+}
+.wk-act {
+  justify-self: stretch;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.wk-act[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: #f1f5f9;
+  color: #64748b;
+}
+.question.flash {
+  animation: qflash 1.8s ease-out 1;
+}
+@keyframes qflash {
+  0%,
+  40% {
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.45);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+@media (max-width: 1180px) {
+  .wk-row {
+    grid-template-columns: 56px minmax(0, 1fr) 92px 118px;
+  }
+  .wk-q {
+    display: none;
+  }
+}

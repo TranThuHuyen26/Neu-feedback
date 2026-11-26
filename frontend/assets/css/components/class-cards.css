@@ -1,0 +1,187 @@
+/* ---------- 13. Class cards ---------- */
+.class-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.class-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 16px 18px;
+  align-items: flex-start;
+  background: var(--accent);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.class-top::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -60px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: -70px -10px 0 -40px rgba(255, 255, 255, 0.18);
+}
+.grid3 > .class-card:nth-child(3n + 2) .class-top {
+  background: var(--teal);
+}
+.grid3 > .class-card:nth-child(3n + 3) .class-top {
+  background: #e0663f;
+}
+.lecturer .grid3 > .class-card:nth-child(3n + 1) .class-top {
+  background: var(--teal);
+}
+.lecturer .grid3 > .class-card:nth-child(3n + 2) .class-top {
+  background: var(--blue);
+}
+.class-top .pill {
+  background: rgba(0, 0, 0, 0.18);
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.class-top .btn {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+  color: #fff;
+}
+.class-card > div:not(.class-top):not(.class-foot) {
+  padding: 18px 18px 16px;
+}
+.class-card > div:not(.class-top):not(.class-foot) > .pill {
+  margin-bottom: 10px;
+}
+.class-card .class-foot b {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent) !important;
+  transition: gap 0.2s;
+}
+.class-card:hover .class-foot b {
+  gap: 8px;
+}
+.class-card h3 {
+  margin-bottom: 2px;
+}
+.class-card p {
+  margin: 0;
+}
+.class-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--line-2);
+  margin-top: auto;
+}
+.grid3 > .card::after {
+  display: none;
+}
+.grid3 > .card:not(.class-card)::after {
+  display: block;
+}
+
+.course {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition:
+    transform 0.22s var(--ease),
+    box-shadow 0.22s;
+}
+.course h3 {
+  margin: 0;
+}
+.course p {
+  margin: 0 0 6px;
+}
+.course-head {
+  height: 64px;
+  margin: -18px -18px 12px;
+  padding: 14px 16px;
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  background: var(--blue);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.course-head::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: -30px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+}
+.course-head b {
+  font-size: 12px;
+  padding: 3px 9px;
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.18);
+}
+.progress {
+  height: 7px;
+  border-radius: 99px;
+  background: #e6eaf2;
+  overflow: hidden;
+  margin: 6px 0 10px;
+  color: var(--accent);
+}
+.progress span {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: currentColor;
+  transform-origin: left;
+  animation: growx 1.2s var(--ease) 0.3s backwards;
+}
+
+.schedule {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 6px 0 12px;
+}
+.slot {
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-2);
+  font-size: 12px;
+  color: var(--muted);
+  transition: transform 0.15s;
+}
+.slot b {
+  font-size: 17px;
+  color: var(--ink);
+}
+.slot:hover {
+  transform: translateY(-2px);
+}
+.slot.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: rgba(255, 255, 255, 0.85);
+}
+.slot.active b {
+  color: #fff;
+}

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lớp học | NEU Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#006E9F" />
+    <link rel="stylesheet" href="assets/css/style.css?v=3.26" />
+  </head>
+  <body class="student" data-api>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="student.html"
+          ><img
+            class="brandmark-img"
+            src="assets/images/neu-logo.png"
+            alt="Logo Trường Đại học Kinh tế Quốc dân"
+            width="44"
+            height="44"
+          />
+          <div><b>NEU Feedback</b><small>ĐH Kinh tế Quốc dân</small></div></a
+        >
+        <div>
+          <div class="nav-label">MENU</div>
+          <nav class="nav" aria-label="Điều hướng chính">
+            <a href="student.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 10.5 12 3l9 7.5" />
+                  <path d="M5.5 9.5V21h13V9.5" />
+                  <path d="M9.5 21v-6h5v6" /></svg></span
+              ><span>Trang chủ</span></a
+            ><a class="active" aria-current="page" href="student-classes.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m12 3 9 5-9 5-9-5z" />
+                  <path d="m3 13 9 5 9-5" /></svg></span
+              ><span>Lớp học của tôi</span></a
+            ><a href="student-feedback.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 5h16v11H9l-5 4z" />
+                  <path d="M8 9.5h8M8 12.5h5" /></svg></span
+              ><span>Theo dõi phản hồi</span></a
+            ><a href="student-ai.html"
+              ><span class="nav-icon"
+                ><svg class="ico robot" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="4" y="8" width="16" height="11" rx="3" />
+                  <path d="M12 8V5" />
+                  <circle cx="12" cy="4" r="1.3" />
+                  <circle class="eye" cx="9" cy="13" r="1.4" />
+                  <circle class="eye" cx="15" cy="13" r="1.4" />
+                  <path d="M9.5 16.3h5" />
+                  <path d="M2.5 12.5v2.5M21.5 12.5v2.5" /></svg></span
+              ><span>NEU AI</span></a
+            >
+          </nav>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="top-actions">
+            <label class="search"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" /></svg
+              ><span class="sr-only" hidden>Tìm kiếm</span
+              ><input type="search" placeholder="Tìm kiếm…" aria-label="Tìm kiếm"
+            /></label>
+            <div class="notif-wrap">
+              <button class="icon-btn notif-btn-api" aria-label="Thông báo">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z" />
+                  <path d="M10 20a2 2 0 0 0 4 0" /></svg
+                ><i class="dot"></i>
+              </button>
+            </div>
+            <div class="user-menu">
+              <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+                <span class="avatar"></span><span class="name"><b>Đang tải…</b></span
+                ><svg class="ud-chev" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="user-dropdown" role="menu">
+                <div class="ud-head">
+                  <span class="avatar"></span>
+                  <div><b class="ud-name">Đang tải…</b><small class="ud-email"></small></div>
+                </div>
+                <a role="menuitem" href="profile.html?role=student"
+                  ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 21a8 8 0 0 1 16 0" /></svg
+                  >Hồ sơ cá nhân</a
+                ><a role="menuitem" href="login.html" class="ud-logout"
+                  ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"
+                    /></svg
+                  >Đăng xuất</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="page">
+          <div class="pagehead">
+            <div>
+              <div class="eyebrow">Lớp học</div>
+              <h1>Lớp học của tôi</h1>
+              <p id="clsCount">Đang tải…</p>
+            </div>
+            <div class="actions">
+              <button class="btn primary" data-modal="joinModal">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" /></svg
+                >Tham gia bằng mã lớp
+              </button>
+            </div>
+          </div>
+          <div class="filters" data-filter-list="#allClasses" data-live>
+            <div class="field">
+              <label for="qs">Tìm lớp</label
+              ><input id="qs" data-key="q" placeholder="Tên lớp, mã lớp, Giảng viên…" />
+            </div>
+          </div>
+          <div class="section-title"><h2>Truy cập gần đây</h2></div>
+          <div class="grid3" id="recentClasses">
+            <div class="loading">
+              <span class="typing"><i></i><i></i><i></i></span> Đang tải…
+            </div>
+          </div>
+          <div class="section-title"><h2>Tất cả lớp học</h2></div>
+          <div class="grid3" id="allClasses"></div>
+          <p class="empty-filter" hidden>Không có lớp nào khớp.</p>
+          <div
+            class="modal"
+            id="joinModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="joinModal-t"
+          >
+            <div class="modal-card">
+              <div class="between modal-top">
+                <h2 id="joinModal-t" class="modal-title">Tham gia lớp học</h2>
+                <button
+                  class="btn sm icon-only"
+                  onclick="closeModal('joinModal')"
+                  aria-label="Đóng"
+                >
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+              <p class="muted">Nhập mã tham gia do Giảng viên cung cấp.</p>
+              <div class="field">
+                <label for="joinCode">Mã tham gia</label
+                ><input id="joinCode" placeholder="VD: ABCD-1234" />
+              </div>
+              <div class="modal-actions">
+                <button class="btn" onclick="closeModal('joinModal')">Hủy</button
+                ><button class="btn primary" data-submit="join">Tham gia</button>
+              </div>
+            </div>
+          </div>
+          <div class="toast" id="toast" role="status"></div>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast"></div>
+    <button class="ai-fab" onclick="toggleAI()" aria-label="Mở NEU AI" title="Hỏi NEU AI">
+      <svg class="robot" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="8" width="16" height="11" rx="3" />
+        <path d="M12 8V5" />
+        <circle cx="12" cy="4" r="1.3" />
+        <circle class="eye" cx="9" cy="13" r="1.4" />
+        <circle class="eye" cx="15" cy="13" r="1.4" />
+        <path d="M9.5 16.3h5" />
+        <path d="M2.5 12.5v2.5M21.5 12.5v2.5" />
+      </svg>
+    </button>
+    <div class="ai-chat" id="aiChat" role="dialog" aria-label="NEU AI">
+      <div class="ai-head">
+        <b>NEU AI · Trợ lý học tập</b
+        ><button class="btn sm" onclick="toggleAI()" aria-label="Đóng">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+      <div class="ai-body" id="aiBody"><p class="muted">Hỏi dựa trên tài liệu lớp học.</p></div>
+      <div class="ai-compose">
+        <input
+          id="aiInput"
+          placeholder="Hỏi NEU AI..."
+          aria-label="Câu hỏi cho NEU AI"
+          onkeydown="if (event.key === 'Enter') askAI();"
+        /><button class="btn primary sm" onclick="askAI()">Gửi</button>
+      </div>
+    </div>
+    <script src="assets/js/core/app.js?v=3.26"></script>
+    <script src="assets/js/core/api.js?v=3.26"></script>
+    <script src="assets/js/core/util.js?v=3.26"></script>
+    <script src="assets/js/shared/editor.js?v=3.26"></script>
+    <script src="assets/js/core/shell.js?v=3.26"></script>
+    <script src="assets/js/shared/classes.js?v=3.26"></script>
+    <script src="assets/js/shared/questions.js?v=3.26"></script>
+    <script src="assets/js/pages/student/common.js?v=3.26"></script>
+    <script src="assets/js/pages/student/classes.js?v=3.26"></script>
+    <script src="assets/js/shared/ai-widget.js?v=3.26"></script>
+    <script src="assets/js/core/boot.js?v=3.26"></script>
+  </body>
+</html>

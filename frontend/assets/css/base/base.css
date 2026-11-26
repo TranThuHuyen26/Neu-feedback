@@ -1,0 +1,134 @@
+/* ---------- 2. Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.4em;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 16.5px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 15px;
+  font-weight: 700;
+}
+p {
+  margin: 0 0 0.6em;
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--line-2);
+  margin: 16px 0;
+}
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+:focus-visible {
+  outline: 2.5px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.muted {
+  color: var(--muted);
+}
+.tiny,
+.small,
+.meta {
+  font-size: 13px;
+}
+.meta {
+  color: var(--muted);
+  margin-top: 2px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.grid {
+  display: grid;
+  gap: 18px;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.grid4,
+.statcards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.statcards {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 20px;
+}

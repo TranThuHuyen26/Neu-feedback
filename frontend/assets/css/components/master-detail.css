@@ -1,0 +1,110 @@
+/* ---------- 15. Master-detail (GV) ---------- */
+.masterdetail,
+.moderation {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.2fr);
+  gap: 20px;
+  align-items: start;
+}
+.queue,
+.detail {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.queue > div:first-child {
+  border-bottom: 1px solid var(--line-2);
+}
+.queue input.search {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  border: 1.5px solid #dde2ec;
+  background: #fff;
+}
+.queue .question,
+.moditem {
+  padding: 16px 18px;
+  border-top: 1px solid var(--line-2);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.queue .question:hover,
+.moditem:hover {
+  background: var(--surface-2);
+}
+.queue .question.selected,
+.moditem.active {
+  background: var(--accent-soft);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+.queue .question p,
+.moditem p {
+  margin: 6px 0;
+}
+.detail {
+  padding: 24px;
+  position: sticky;
+  top: 88px;
+}
+.detail h2 {
+  font-size: 22px;
+  margin: 8px 0 12px;
+}
+.detail > p b {
+  font-size: 19px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+.detail h3 {
+  margin-top: 24px;
+}
+.ai-box {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent-soft), #fff 70%);
+  border: 1.5px solid color-mix(in srgb, var(--accent) 25%, #fff);
+}
+.ai-box b {
+  color: var(--accent);
+}
+.ai-box p {
+  margin: 2px 0 0;
+}
+.similar-group {
+  padding: 16px;
+  margin-top: 12px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.similar-group:hover {
+  box-shadow: var(--shadow);
+}
+.similar-group.confirmed {
+  border-color: color-mix(in srgb, var(--accent) 35%, #fff);
+  background: color-mix(in srgb, var(--accent-soft) 45%, #fff);
+}
+.similar-group p {
+  margin: 8px 0;
+}
+.similar-group .row {
+  margin-top: 10px;
+}
+.score {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 14px;
+  background: var(--red);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 16px;
+}

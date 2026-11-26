@@ -1,0 +1,71 @@
+/* ---------- 6. Cards ---------- */
+.card,
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.22s var(--ease),
+    box-shadow 0.22s,
+    border-color 0.22s;
+}
+.panel h3 {
+  margin-bottom: 12px;
+}
+a.card:hover,
+.class-card:hover,
+.course:hover,
+.grid4 > .card:hover,
+.grid3 > .card:hover,
+.statcards > .card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: #d5dae4;
+}
+.kpi {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 4px 0 6px;
+  font-variant-numeric: tabular-nums;
+}
+.grid4 > .card,
+.grid3 > .card,
+.statcards > .card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.grid4 > .card::after,
+.grid3 > .card::after,
+.statcards > .card::after {
+  content: "";
+  position: absolute;
+  right: -26px;
+  top: -26px;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  opacity: 0.7;
+  transition: transform 0.4s var(--ease);
+}
+.grid4 > .card:hover::after,
+.grid3 > .card:hover::after,
+.statcards > .card:hover::after {
+  transform: scale(1.25);
+}
+.grid4 > .card > *,
+.grid3 > .card > *,
+.statcards > .card > * {
+  position: relative;
+  z-index: 1;
+}
+.statcards .badge {
+  align-self: flex-start;
+}

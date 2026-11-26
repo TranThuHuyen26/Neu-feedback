@@ -1,0 +1,158 @@
+/* ---------- 29. Nhận diện Trường Đại học Kinh tế Quốc dân ---------- */
+.brandmark-img {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 40, 70, 0.18));
+}
+.brand b {
+  letter-spacing: -0.01em;
+}
+.admin .brandmark-img {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+}
+/* Trang đăng nhập */
+.login-intro {
+  background:
+    linear-gradient(160deg, rgba(0, 76, 112, 0.94), rgba(0, 110, 159, 0.86)),
+    url("../../images/neu-campus.jpg") center/cover no-repeat,
+    #005f8a;
+}
+.login-intro::after,
+.login-intro > .badge::after {
+  display: none;
+}
+.login-logo {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.35));
+  animation: float 8s ease-in-out infinite;
+}
+.login-intro .eyebrow {
+  letter-spacing: 0.12em;
+}
+.login-foot {
+  position: absolute;
+  left: 72px;
+  right: 72px;
+  bottom: 28px;
+  margin: 0 !important;
+  font-size: 12.5px !important;
+  opacity: 0.75;
+}
+.login-card .btn.primary {
+  background: var(--neu-blue-ink);
+  border-color: var(--neu-blue-ink);
+}
+/* Khối chào: logo chìm thay hình trang trí */
+.hero::after {
+  right: 40px;
+  top: 50%;
+  width: 210px;
+  height: 210px;
+  margin-top: -105px;
+  border-radius: 0;
+  box-shadow: none;
+  animation: none;
+  background: url("../../images/neu-logo.png") center/contain no-repeat;
+  opacity: 0.14;
+  filter: grayscale(1) brightness(2.4);
+}
+.public .hero::after {
+  display: none;
+}
+.ai-light {
+  background: linear-gradient(145deg, #e6f4fb 0%, #ffffff 70%);
+  border-color: #bfe3f4;
+}
+.ai-light-chip {
+  border-color: #bfe3f4;
+}
+/* Chân trang các trang công khai */
+.site-foot {
+  border-top: 1px solid var(--line);
+  background: #fff;
+  margin-top: 40px;
+}
+.site-foot-in {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px 32px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.site-foot-in div {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: var(--muted);
+}
+.site-foot-in b {
+  color: var(--ink);
+  font-size: 14px;
+}
+.site-foot-in a {
+  color: var(--neu-blue-ink);
+  font-weight: 600;
+}
+.site-foot-copy {
+  margin-left: auto;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+/* Bản in báo cáo */
+.print-head {
+  display: none;
+}
+@media print {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .sidebar,
+  .topbar,
+  .pagehead .actions,
+  .ai-fab,
+  .ai-chat,
+  #rhSumBtn,
+  .toast,
+  .nf-toast {
+    display: none !important;
+  }
+  .shell,
+  .app {
+    display: block;
+    background: none;
+  }
+  .page {
+    padding: 0;
+  }
+  .print-head {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    border-bottom: 2px solid var(--neu-blue-ink);
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+  }
+  .print-head b {
+    display: block;
+    color: var(--neu-blue-ink);
+    letter-spacing: 0.04em;
+  }
+  .print-head span {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .card,
+  .panel {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}

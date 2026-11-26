@@ -1,0 +1,78 @@
+/* ===== 37. Bảng màu lớp pastel (Phương án 1): dải nền nhạt + chữ đậm + biểu tượng có màu ===== */
+.hcard-top {
+  color: var(--ink);
+}
+.hcard-top b {
+  color: var(--cc, #2f7fa8);
+}
+.hcard-top span {
+  color: var(--ink-2);
+  opacity: 1;
+}
+.hcard-top svg {
+  stroke: var(--cc, #2f7fa8);
+  opacity: 0.85;
+  width: 40px;
+  height: 40px;
+}
+.hcard-top .hc-sem {
+  display: inline-block;
+  margin-top: 6px;
+  font-style: normal;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--cc);
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+.class-top.pastel {
+  color: var(--ink);
+}
+.class-top.pastel::after,
+.class-top.pastel::before {
+  background: rgba(255, 255, 255, 0.55) !important;
+  box-shadow: none !important;
+}
+.class-top.pastel .pill {
+  background: #fff !important;
+  color: var(--cc) !important;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+.class-top.pastel .on-dark-btn,
+.class-top.pastel .btn {
+  background: #fff !important;
+  color: var(--cc) !important;
+}
+.class-top.pastel .ct-ico svg {
+  position: absolute;
+  right: 58px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: var(--cc);
+  stroke-width: 1.7;
+  opacity: 0.9;
+  z-index: 1;
+}
+.class-card .class-top.pastel:not(:has(.on-dark-btn)) .ct-ico svg {
+  right: 16px;
+}
+.hgrid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+@media (max-width: 860px) {
+  .hgrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 600px) {
+  .hgrid {
+    grid-template-columns: 1fr !important;
+  }
+}

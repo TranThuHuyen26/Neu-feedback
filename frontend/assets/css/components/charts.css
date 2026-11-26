@@ -1,0 +1,109 @@
+/* ---------- 17. Charts ---------- */
+.chart {
+  height: 240px;
+  position: relative;
+}
+.chart svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.chart .line {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1600;
+  animation: draw 2s var(--ease) 0.3s backwards;
+}
+.chart .bar-rect {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  animation: growy 0.9s var(--ease) backwards;
+}
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  height: 200px;
+  padding: 28px 4px 0;
+  border-bottom: 1px solid var(--line);
+}
+.bar {
+  position: relative;
+  flex: 1;
+  border-radius: 10px 10px 4px 4px;
+  background: color-mix(in srgb, var(--accent) 22%, #fff);
+  transform-origin: bottom;
+  animation: growy 0.9s var(--ease) backwards;
+  transition: background 0.2s;
+}
+.bar:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.bar:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.bar:nth-child(4) {
+  animation-delay: 0.24s;
+}
+.bar:nth-child(5) {
+  animation-delay: 0.32s;
+}
+.bar:hover,
+.bar.active {
+  background: var(--accent);
+}
+.bar strong {
+  position: absolute;
+  left: 50%;
+  top: -24px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.donut {
+  width: 150px;
+  height: 150px;
+  flex: 0 0 150px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--accent) 0 86%,
+    var(--amber) 86% 97%,
+    var(--red) 97% 99%,
+    #98a2b3 99%
+  );
+  display: grid;
+  place-items: center;
+  animation: spinIn 1s var(--ease);
+}
+.donut::after {
+  content: "";
+  white-space: pre;
+  text-align: center;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.3;
+}
+.topic {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 1.3;
+  animation: float 6s ease-in-out infinite;
+}
+.topic:nth-child(2) {
+  animation-delay: -2s;
+}
+.topic:nth-child(3) {
+  animation-delay: -4s;
+}

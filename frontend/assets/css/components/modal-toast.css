@@ -1,0 +1,77 @@
+/* ---------- 19. Modal & toast ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(18, 26, 51, 0.45);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-card {
+  width: min(560px, 100%);
+  background: #fff;
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(16px) scale(0.97);
+  transition: transform 0.3s var(--ease);
+}
+.modal.open .modal-card {
+  transform: none;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+.toast,
+.nf-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.25s,
+    transform 0.3s var(--ease);
+}
+.toast.show,
+.nf-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.toast::before,
+.nf-toast::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--green)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E")
+    center/13px no-repeat;
+}
+.toast:empty {
+  display: none;
+}

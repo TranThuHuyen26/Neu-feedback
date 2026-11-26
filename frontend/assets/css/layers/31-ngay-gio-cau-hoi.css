@@ -1,0 +1,26 @@
+/* ===== v3.17: ngày giờ ở câu hỏi nằm bên phải, nhỏ và nhạt ===== */
+.question .q-head,
+.ans-block .ab-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.q-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.q-time {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--muted, #64748b);
+  white-space: nowrap;
+}
+.q-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}

@@ -1,0 +1,50 @@
+/* ---------- 23. Tinh chỉnh ---------- */
+.shell,
+.app {
+  background: linear-gradient(90deg, #fff 0 256px, transparent 256px);
+}
+.admin .shell,
+.admin.app,
+.admin .app {
+  background: linear-gradient(90deg, var(--night) 0 256px, transparent 256px);
+}
+.ico {
+  display: inline-block;
+  vertical-align: -4px;
+  width: 17px;
+  height: 17px;
+}
+.btn .ico {
+  vertical-align: 0;
+}
+a.tiny {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+a.tiny .ico {
+  width: 15px;
+  height: 15px;
+}
+a.tiny:hover .ico {
+  transform: translateX(3px);
+}
+.ico {
+  transition: transform 0.2s var(--ease);
+}
+.chart text {
+  font-family: var(--font);
+}
+@media (max-width: 960px) {
+  .shell,
+  .app,
+  .admin .shell {
+    background: linear-gradient(90deg, #fff 0 76px, transparent 76px);
+  }
+  .admin .shell {
+    background: linear-gradient(90deg, var(--night) 0 76px, transparent 76px);
+  }
+}

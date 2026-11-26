@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" width="320" height="300" role="img" aria-label="NEU AI">
+  <defs>
+    <linearGradient id="head" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d3e4fa"/></linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef5ff"/><stop offset="1" stop-color="#b7d2f6"/></linearGradient>
+    <linearGradient id="lap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a7bc8"/><stop offset="1" stop-color="#2f58a0"/></linearGradient>
+    <radialGradient id="eye" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#9cf0ff"/><stop offset="1" stop-color="#2bbdf0"/></radialGradient>
+  </defs>
+  <ellipse cx="160" cy="279" rx="100" ry="12" fill="#c9dcf3" opacity=".75"/>
+  <!-- thân -->
+  <rect x="104" y="148" width="112" height="100" rx="40" fill="url(#body)" stroke="#a9c6ec" stroke-width="2"/>
+  <circle cx="160" cy="176" r="10" fill="#1f86d9"/><circle cx="160" cy="176" r="4.5" fill="#bdeaff"/>
+  <!-- tay trái giữ laptop -->
+  <path d="M110 172 Q78 196 98 226" fill="none" stroke="#b7d2f6" stroke-width="19" stroke-linecap="round"/>
+  <!-- ăng-ten -->
+  <path d="M160 50 V30" stroke="#2a6fd1" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="160" cy="24" r="9" fill="#ffb11f"/><circle cx="157" cy="21" r="2.6" fill="#fff" opacity=".8"/>
+  <!-- tai nghe -->
+  <rect x="58" y="88" width="30" height="40" rx="14" fill="#2a6fd1"/>
+  <rect x="232" y="88" width="30" height="40" rx="14" fill="#2a6fd1"/>
+  <!-- đầu -->
+  <rect x="78" y="48" width="164" height="112" rx="52" fill="url(#head)" stroke="#a9c6ec" stroke-width="2"/>
+  <rect x="97" y="66" width="126" height="76" rx="34" fill="#0f2757"/>
+  <rect x="122" y="88" width="21" height="28" rx="10.5" fill="url(#eye)"/>
+  <rect x="177" y="88" width="21" height="28" rx="10.5" fill="url(#eye)"/>
+  <circle cx="129" cy="95" r="3.6" fill="#fff" opacity=".9"/><circle cx="184" cy="95" r="3.6" fill="#fff" opacity=".9"/>
+  <path d="M143 126 Q160 140 177 126" fill="none" stroke="#4fd6ff" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="108" cy="124" r="6" fill="#ff7fa0" opacity=".9"/><circle cx="212" cy="124" r="6" fill="#ff7fa0" opacity=".9"/>
+  <!-- laptop -->
+  <rect x="106" y="188" width="108" height="54" rx="8" fill="url(#lap)"/>
+  <path d="M160 200 l3.6 7.4 7.4 3.6 -7.4 3.6 -3.6 7.4 -3.6 -7.4 -7.4 -3.6 7.4 -3.6z" fill="#fff"/>
+  <path d="M90 244 H230 L244 262 Q246 268 239 268 H81 Q74 268 76 262Z" fill="#294d8f"/>
+  <rect x="140" y="250" width="40" height="5" rx="2.5" fill="#6f95d4"/>
+  <circle cx="98" cy="229" r="11" fill="#eef5ff" stroke="#a9c6ec" stroke-width="2"/>
+  <!-- tay phải vẫy -->
+  <path d="M212 170 Q248 160 254 128" fill="none" stroke="#b7d2f6" stroke-width="19" stroke-linecap="round"/>
+  <circle cx="254" cy="122" r="12" fill="#eef5ff" stroke="#a9c6ec" stroke-width="2"/>
+  <path d="M276 116 q8 6 8 16 M284 108 q14 10 14 28" fill="none" stroke="#2a6fd1" stroke-width="3.5" stroke-linecap="round" opacity=".6"/>
+  <!-- bong bóng chat -->
+  <path d="M236 14 h46 a14 14 0 0 1 14 14 v12 a14 14 0 0 1 -14 14 h-24 l-12 10 v-10 h-10 a14 14 0 0 1 -14 -14 v-12 a14 14 0 0 1 14 -14z" fill="#fff" stroke="#2a6fd1" stroke-width="3"/>
+  <circle cx="246" cy="34" r="3.6" fill="#2a6fd1"/><circle cx="259" cy="34" r="3.6" fill="#2a6fd1"/><circle cx="272" cy="34" r="3.6" fill="#2a6fd1"/>
+</svg>

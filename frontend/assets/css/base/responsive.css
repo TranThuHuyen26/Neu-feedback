@@ -1,0 +1,73 @@
+/* ---------- 22. Responsive ---------- */
+@media (max-width: 1180px) {
+  .statcards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .grid4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .masterdetail,
+  .moderation,
+  .session-layout {
+    grid-template-columns: 1fr;
+  }
+  .detail,
+  .sticky {
+    position: static;
+  }
+  .public .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-art {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  .grid2,
+  .grid3,
+  .form-grid,
+  .chat {
+    grid-template-columns: 1fr;
+  }
+  .grid[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+  .page,
+  .content {
+    padding: 22px 18px 48px;
+  }
+  .topbar {
+    padding: 0 18px;
+  }
+  .login-layout {
+    grid-template-columns: 1fr;
+  }
+  .login-intro {
+    padding: 48px 32px;
+  }
+  .chat-side {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .statcards,
+  .grid4 {
+    grid-template-columns: 1fr 1fr;
+  }
+  h1,
+  .hero h1 {
+    font-size: 24px;
+  }
+  .public-nav {
+    display: none;
+  }
+  .public .hero {
+    padding: 32px;
+    margin: 16px;
+  }
+  .ai-chat {
+    right: 12px;
+    left: 12px;
+    width: auto;
+  }
+}

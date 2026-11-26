@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Theo dõi phản hồi | NEU Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#006E9F" />
+    <link rel="stylesheet" href="assets/css/style.css?v=3.26" />
+  </head>
+  <body class="student" data-api>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="student.html"
+          ><img
+            class="brandmark-img"
+            src="assets/images/neu-logo.png"
+            alt="Logo Trường Đại học Kinh tế Quốc dân"
+            width="44"
+            height="44"
+          />
+          <div><b>NEU Feedback</b><small>ĐH Kinh tế Quốc dân</small></div></a
+        >
+        <div>
+          <div class="nav-label">MENU</div>
+          <nav class="nav" aria-label="Điều hướng chính">
+            <a href="student.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 10.5 12 3l9 7.5" />
+                  <path d="M5.5 9.5V21h13V9.5" />
+                  <path d="M9.5 21v-6h5v6" /></svg></span
+              ><span>Trang chủ</span></a
+            ><a href="student-classes.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m12 3 9 5-9 5-9-5z" />
+                  <path d="m3 13 9 5 9-5" /></svg></span
+              ><span>Lớp học của tôi</span></a
+            ><a class="active" aria-current="page" href="student-feedback.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 5h16v11H9l-5 4z" />
+                  <path d="M8 9.5h8M8 12.5h5" /></svg></span
+              ><span>Theo dõi phản hồi</span></a
+            ><a href="student-ai.html"
+              ><span class="nav-icon"
+                ><svg class="ico robot" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="4" y="8" width="16" height="11" rx="3" />
+                  <path d="M12 8V5" />
+                  <circle cx="12" cy="4" r="1.3" />
+                  <circle class="eye" cx="9" cy="13" r="1.4" />
+                  <circle class="eye" cx="15" cy="13" r="1.4" />
+                  <path d="M9.5 16.3h5" />
+                  <path d="M2.5 12.5v2.5M21.5 12.5v2.5" /></svg></span
+              ><span>NEU AI</span></a
+            >
+          </nav>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="top-actions">
+            <label class="search"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" /></svg
+              ><span class="sr-only" hidden>Tìm kiếm</span
+              ><input type="search" placeholder="Tìm kiếm…" aria-label="Tìm kiếm"
+            /></label>
+            <div class="notif-wrap">
+              <button class="icon-btn notif-btn-api" aria-label="Thông báo">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z" />
+                  <path d="M10 20a2 2 0 0 0 4 0" /></svg
+                ><i class="dot"></i>
+              </button>
+            </div>
+            <div class="user-menu">
+              <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+                <span class="avatar"></span><span class="name"><b>Đang tải…</b></span
+                ><svg class="ud-chev" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="user-dropdown" role="menu">
+                <div class="ud-head">
+                  <span class="avatar"></span>
+                  <div><b class="ud-name">Đang tải…</b><small class="ud-email"></small></div>
+                </div>
+                <a role="menuitem" href="profile.html?role=student"
+                  ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 21a8 8 0 0 1 16 0" /></svg
+                  >Hồ sơ cá nhân</a
+                ><a role="menuitem" href="login.html" class="ud-logout"
+                  ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"
+                    /></svg
+                  >Đăng xuất</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="page">
+          <section class="mat-hero page-hero">
+            <div class="ph-text">
+              <div class="eyebrow">THEO DÕI</div>
+              <h1>Phản hồi của tôi</h1>
+              <p>Các câu hỏi bạn đã gửi.</p>
+            </div>
+            <svg class="mh-art" viewBox="0 0 310 150" aria-hidden="true">
+              <defs>
+                <linearGradient id="hb1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#5AA8F0" />
+                  <stop offset="1" stop-color="#1E5FB8" />
+                </linearGradient>
+                <linearGradient id="hb2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#2F6FC4" />
+                  <stop offset="1" stop-color="#173F7E" />
+                </linearGradient>
+                <linearGradient id="hb3" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#8DBDF0" />
+                  <stop offset="1" stop-color="#5C97DD" />
+                </linearGradient>
+                <linearGradient id="hpg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#FFFFFF" />
+                  <stop offset="1" stop-color="#E6EFFA" />
+                </linearGradient>
+                <linearGradient id="hor" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#F7C25A" />
+                  <stop offset="1" stop-color="#EE9A2E" />
+                </linearGradient>
+                <linearGradient id="hlf" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0" stop-color="#BFD8F5" />
+                  <stop offset="1" stop-color="#E4EFFB" />
+                </linearGradient>
+              </defs>
+              <g fill="url(#hlf)">
+                <path d="M40 150c-6-30 6-58 30-72-4 26-12 50-30 72z" />
+                <path d="M28 150c-20-16-30-38-26-60 16 14 24 34 26 60z" />
+                <path d="M262 150c6-28-4-56-26-72 2 26 10 50 26 72z" />
+                <path d="M274 150c18-18 26-40 20-62-14 16-20 36-20 62z" />
+              </g>
+              <ellipse cx="155" cy="146" rx="100" ry="6" fill="#E3ECF7" />
+              <rect x="66" y="14" width="104" height="62" rx="16" fill="url(#hb1)" />
+              <path d="M88 76l-8 18 22-18" fill="#3F8CDB" />
+              <path
+                d="M86 38h62M86 54h42"
+                stroke="#D8E9FA"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+              <rect x="138" y="66" width="108" height="62" rx="16" fill="url(#hb2)" />
+              <path d="M224 128l8 18-22-18" fill="#173F7E" />
+              <circle cx="166" cy="97" r="14" fill="url(#hor)" />
+              <path
+                d="M159 97l5 5 9-10"
+                fill="none"
+                stroke="#fff"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M190 90h40M190 106h28"
+                stroke="#9CC5E8"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </section>
+          <div class="chips" id="fbTabs"></div>
+          <div class="fb-bar">
+            <label class="search fb-q"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" /></svg
+              ><input
+                id="fbQ"
+                type="search"
+                placeholder="Tìm theo nội dung câu hỏi…"
+                aria-label="Tìm theo nội dung câu hỏi" /></label
+            ><select id="fbClass" aria-label="Lớp học">
+              <option value="">Lớp học: Tất cả</option></select
+            ><select id="fbSort" aria-label="Sắp xếp">
+              <option value="new">Mới nhất trước</option>
+              <option value="old">Cũ nhất trước</option>
+            </select>
+          </div>
+          <div class="fb-list" id="fbList">
+            <div class="loading">
+              <span class="typing"><i></i><i></i><i></i></span> Đang tải…
+            </div>
+          </div>
+          <div class="toast" id="toast" role="status"></div>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast"></div>
+    <button class="ai-fab" onclick="toggleAI()" aria-label="Mở NEU AI" title="Hỏi NEU AI">
+      <svg class="robot" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="8" width="16" height="11" rx="3" />
+        <path d="M12 8V5" />
+        <circle cx="12" cy="4" r="1.3" />
+        <circle class="eye" cx="9" cy="13" r="1.4" />
+        <circle class="eye" cx="15" cy="13" r="1.4" />
+        <path d="M9.5 16.3h5" />
+        <path d="M2.5 12.5v2.5M21.5 12.5v2.5" />
+      </svg>
+    </button>
+    <div class="ai-chat" id="aiChat" role="dialog" aria-label="NEU AI">
+      <div class="ai-head">
+        <b>NEU AI · Trợ lý học tập</b
+        ><button class="btn sm" onclick="toggleAI()" aria-label="Đóng">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+      <div class="ai-body" id="aiBody"><p class="muted">Hỏi dựa trên tài liệu lớp học.</p></div>
+      <div class="ai-compose">
+        <input
+          id="aiInput"
+          placeholder="Hỏi NEU AI..."
+          aria-label="Câu hỏi cho NEU AI"
+          onkeydown="if (event.key === 'Enter') askAI();"
+        /><button class="btn primary sm" onclick="askAI()">Gửi</button>
+      </div>
+    </div>
+    <script src="assets/js/core/app.js?v=3.26"></script>
+    <script src="assets/js/core/api.js?v=3.26"></script>
+    <script src="assets/js/core/util.js?v=3.26"></script>
+    <script src="assets/js/shared/editor.js?v=3.26"></script>
+    <script src="assets/js/core/shell.js?v=3.26"></script>
+    <script src="assets/js/shared/classes.js?v=3.26"></script>
+    <script src="assets/js/shared/questions.js?v=3.26"></script>
+    <script src="assets/js/pages/student/common.js?v=3.26"></script>
+    <script src="assets/js/pages/student/feedback.js?v=3.26"></script>
+    <script src="assets/js/shared/ai-widget.js?v=3.26"></script>
+    <script src="assets/js/core/boot.js?v=3.26"></script>
+  </body>
+</html>

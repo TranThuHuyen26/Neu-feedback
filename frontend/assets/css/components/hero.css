@@ -1,0 +1,72 @@
+/* ---------- 7. Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-xl);
+  padding: 30px 34px;
+  min-height: 220px;
+  color: #fff;
+  background: var(--accent);
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -60px;
+  top: -80px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.28);
+  animation: spin 40s linear infinite;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 70px;
+  top: 40px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 70px 140px 0 -44px var(--accent-2);
+  animation: float 7s ease-in-out infinite;
+}
+.hero h1 {
+  font-size: 32px;
+  color: #fff;
+  margin: 6px 0 8px;
+  max-width: 720px;
+}
+.hero p {
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 620px;
+  font-size: 15px;
+}
+.hero .tiny {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.hero .btn {
+  background: #fff;
+  color: var(--accent);
+  border-color: #fff;
+}
+.hero .btn:hover {
+  background: #fff;
+  color: var(--accent);
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.35);
+}
+.hero .badge {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+.hero .row {
+  margin-top: 26px !important;
+}

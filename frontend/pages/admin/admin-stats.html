@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Thống kê hệ thống | NEU Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#006E9F" />
+    <link rel="stylesheet" href="assets/css/style.css?v=3.26" />
+  </head>
+  <body class="admin" data-api>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="admin.html"
+          ><img
+            class="brandmark-img"
+            src="assets/images/neu-logo.png"
+            alt="Logo Trường Đại học Kinh tế Quốc dân"
+            width="44"
+            height="44"
+          />
+          <div><b>NEU Feedback</b><small>Quản trị</small></div></a
+        >
+        <div>
+          <div class="nav-label">MENU</div>
+          <nav class="nav" aria-label="Điều hướng chính">
+            <a href="admin.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="9" rx="1.5" />
+                  <rect x="14" y="3" width="7" height="5" rx="1.5" />
+                  <rect x="14" y="12" width="7" height="9" rx="1.5" />
+                  <rect x="3" y="16" width="7" height="5" rx="1.5" /></svg></span
+              ><span>Tổng quan</span></a
+            ><a href="admin-accounts.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="9" cy="8" r="3.5" />
+                  <path
+                    d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M18 13.5a7 7 0 0 1 4 6.5"
+                  /></svg></span
+              ><span>Tài khoản</span></a
+            ><a href="admin-reports.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 21V4M5 4h12l-2 4 2 4H5" /></svg></span
+              ><span>Nội dung gắn cờ</span
+              ><span class="nav-count" id="navFlagCount" hidden>0</span></a
+            ><a class="active" aria-current="page" href="admin-stats.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg></span
+              ><span>Thống kê</span></a
+            >
+          </nav>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="top-actions">
+            <label class="search"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" /></svg
+              ><span class="sr-only" hidden>Tìm kiếm</span
+              ><input type="search" placeholder="Tìm kiếm…" aria-label="Tìm kiếm"
+            /></label>
+            <div class="notif-wrap">
+              <button class="icon-btn notif-btn-api" aria-label="Thông báo">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z" />
+                  <path d="M10 20a2 2 0 0 0 4 0" /></svg
+                ><i class="dot"></i>
+              </button>
+            </div>
+            <div class="user-menu">
+              <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+                <span class="avatar"></span><span class="name"><b>Đang tải…</b></span
+                ><svg class="ud-chev" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="user-dropdown" role="menu">
+                <div class="ud-head">
+                  <span class="avatar"></span>
+                  <div><b class="ud-name">Đang tải…</b><small class="ud-email"></small></div>
+                </div>
+                <a role="menuitem" href="login.html" class="ud-logout"
+                  ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"
+                    /></svg
+                  >Đăng xuất</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="page">
+          <section class="mat-hero page-hero">
+            <div class="ph-text">
+              <div class="eyebrow">THỐNG KÊ</div>
+              <h1>Thống kê hệ thống</h1>
+              <div class="ph-row">
+                <p id="stRangeText">Đang tải…</p>
+                <div class="ph-actions">
+                  <button class="btn primary" id="stExport">
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg
+                    >Xuất báo cáo tổng kết
+                  </button>
+                </div>
+              </div>
+            </div>
+            <svg class="mh-art" viewBox="0 0 310 150" aria-hidden="true">
+              <defs>
+                <linearGradient id="hb1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#5AA8F0" />
+                  <stop offset="1" stop-color="#1E5FB8" />
+                </linearGradient>
+                <linearGradient id="hb2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#2F6FC4" />
+                  <stop offset="1" stop-color="#173F7E" />
+                </linearGradient>
+                <linearGradient id="hb3" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#8DBDF0" />
+                  <stop offset="1" stop-color="#5C97DD" />
+                </linearGradient>
+                <linearGradient id="hpg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#FFFFFF" />
+                  <stop offset="1" stop-color="#E6EFFA" />
+                </linearGradient>
+                <linearGradient id="hor" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#F7C25A" />
+                  <stop offset="1" stop-color="#EE9A2E" />
+                </linearGradient>
+                <linearGradient id="hlf" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0" stop-color="#BFD8F5" />
+                  <stop offset="1" stop-color="#E4EFFB" />
+                </linearGradient>
+              </defs>
+              <g fill="url(#hlf)">
+                <path d="M40 150c-6-30 6-58 30-72-4 26-12 50-30 72z" />
+                <path d="M28 150c-20-16-30-38-26-60 16 14 24 34 26 60z" />
+                <path d="M262 150c6-28-4-56-26-72 2 26 10 50 26 72z" />
+                <path d="M274 150c18-18 26-40 20-62-14 16-20 36-20 62z" />
+              </g>
+              <ellipse cx="155" cy="146" rx="100" ry="6" fill="#E3ECF7" />
+              <rect
+                x="78"
+                y="10"
+                width="154"
+                height="126"
+                rx="14"
+                fill="url(#hpg)"
+                stroke="#C9DCF2"
+                stroke-width="2"
+              />
+              <rect x="98" y="88" width="20" height="34" rx="4" fill="url(#hb3)" />
+              <rect x="128" y="66" width="20" height="56" rx="4" fill="url(#hb1)" />
+              <rect x="158" y="78" width="20" height="44" rx="4" fill="url(#hb3)" />
+              <rect x="188" y="46" width="20" height="76" rx="4" fill="url(#hb2)" />
+              <path
+                d="M100 64l30-20 30 10 38-26"
+                fill="none"
+                stroke="#F2A93B"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="198" cy="28" r="7" fill="url(#hor)" />
+            </svg>
+          </section>
+          <div class="filter-row">
+            <label class="field-out"
+              ><span>Năm học</span
+              ><select id="stYear"></select
+            ></label>
+            <label class="field-out"
+              ><span>Học kỳ</span
+              ><select id="stSem"></select
+            ></label>
+            <label class="field-out"
+              ><span>Khoa</span
+              ><select id="stFac"></select
+            ></label>
+            <label class="field-out"
+              ><span>Giảng viên</span
+              ><select id="stLecSel"></select
+            ></label>
+          </div>
+          <div class="grid4" id="stKpis">
+            <div class="loading">
+              <span class="typing"><i></i><i></i><i></i></span> Đang tải…
+            </div>
+          </div>
+          <div class="st-grid">
+            <section class="panel">
+              <h3>Câu hỏi theo ngày</h3>
+              <div id="stDay"></div>
+            </section>
+            <section class="panel">
+              <h3>Trạng thái câu hỏi</h3>
+              <div class="row" style="gap: 22px; flex-wrap: nowrap">
+                <div class="donut" id="stDonut"></div>
+                <div class="legend-list" id="stLegend"></div>
+              </div>
+            </section>
+          </div>
+          <section class="panel" style="margin-top: 18px">
+            <div class="between">
+              <h3>Câu hỏi theo tuần học</h3>
+              <span class="tiny muted"
+                ><span class="legend" style="background: var(--accent)"></span>Đã trả lời　<span
+                  class="legend"
+                  style="background: var(--amber); margin-left: 10px"
+                ></span
+                >Đang chờ</span
+              >
+            </div>
+            <div class="stackbars" id="stWeek"></div>
+          </section>
+          <div class="st-grid even">
+            <section class="panel">
+              <h3>So sánh theo khoa</h3>
+              <div id="stFaculty"></div>
+            </section>
+            <section class="panel">
+              <h3>Giảng viên phản hồi thế nào?</h3>
+              <div id="stLect"></div>
+            </section>
+          </div>
+          <div class="st-grid">
+            <section class="panel">
+              <h3>Khung giờ sinh viên hay hỏi</h3>
+              <div id="stHeat"></div>
+            </section>
+            <section class="panel">
+              <h3>Lớp nào có nhiều câu hỏi nhất?</h3>
+              <div id="stClassBars"></div>
+            </section>
+          </div>
+          <section class="panel" style="margin-top: 18px">
+            <h3>Chủ đề nổi bật theo từng tuần</h3>
+            <p class="tiny muted" style="margin: -6px 0 12px">
+              Đếm từ khóa xuất hiện nhiều nhất trong nội dung câu hỏi của mỗi tuần.
+            </p>
+            <div id="stKeywords"></div>
+          </section>
+          <section class="panel" id="stAI" style="margin-top: 18px">
+            <h3>Hiệu suất AI</h3>
+            <div class="grid4" id="stAIKpis"></div>
+          </section>
+          <div class="section-title" id="stDetail">
+            <h2>Chi tiết theo lớp</h2>
+            <span class="tiny muted">Bấm tiêu đề cột để sắp xếp</span>
+          </div>
+          <div class="table-wrap">
+            <table id="stTableEl">
+              <thead>
+                <tr>
+                  <th data-sort="code">Lớp</th>
+                  <th data-sort="lecturer">Giảng viên</th>
+                  <th data-sort="students">Sinh viên</th>
+                  <th data-sort="questions">Câu hỏi</th>
+                  <th data-sort="answered">Đã trả lời</th>
+                  <th data-sort="waiting">Đang chờ</th>
+                  <th data-sort="answer_rate">Tỷ lệ phản hồi</th>
+                  <th data-sort="avg_response_seconds">Phản hồi TB</th>
+                </tr>
+              </thead>
+              <tbody id="stClassTable"></tbody>
+            </table>
+          </div>
+          <div class="toast" id="toast" role="status"></div>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="assets/js/core/app.js?v=3.26"></script>
+    <script src="assets/js/core/api.js?v=3.26"></script>
+    <script src="assets/js/core/util.js?v=3.26"></script>
+    <script src="assets/js/shared/editor.js?v=3.26"></script>
+    <script src="assets/js/core/shell.js?v=3.26"></script>
+    <script src="assets/js/shared/classes.js?v=3.26"></script>
+    <script src="assets/js/shared/questions.js?v=3.26"></script>
+    <script src="assets/js/shared/ai-widget.js?v=3.26"></script>
+    <script src="assets/js/pages/admin/common.js?v=3.26"></script>
+    <script src="assets/js/pages/admin/stats.js?v=3.26"></script>
+    <script src="assets/js/core/boot.js?v=3.26"></script>
+  </body>
+</html>

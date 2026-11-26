@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quản lý tài khoản</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#006E9F" />
+    <link rel="stylesheet" href="assets/css/style.css?v=3.26" />
+  </head>
+  <body class="admin" data-api>
+    <div class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="admin.html"
+          ><img
+            class="brandmark-img"
+            src="assets/images/neu-logo.png"
+            alt="Logo Trường Đại học Kinh tế Quốc dân"
+            width="44"
+            height="44"
+          />
+          <div><b>NEU Feedback</b><small>Quản trị</small></div></a
+        >
+        <div>
+          <div class="nav-label">MENU</div>
+          <nav class="nav" aria-label="Điều hướng chính">
+            <a href="admin.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="9" rx="1.5" />
+                  <rect x="14" y="3" width="7" height="5" rx="1.5" />
+                  <rect x="14" y="12" width="7" height="9" rx="1.5" />
+                  <rect x="3" y="16" width="7" height="5" rx="1.5" /></svg></span
+              ><span>Tổng quan</span></a
+            ><a class="active" aria-current="page" href="admin-accounts.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="9" cy="8" r="3.5" />
+                  <path
+                    d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M18 13.5a7 7 0 0 1 4 6.5"
+                  /></svg></span
+              ><span>Tài khoản</span></a
+            ><a href="admin-reports.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 21V4M5 4h12l-2 4 2 4H5" /></svg></span
+              ><span>Nội dung gắn cờ</span
+              ><span class="nav-count" id="navFlagCount" hidden>0</span></a
+            ><a href="admin-stats.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg></span
+              ><span>Thống kê</span></a
+            >
+          </nav>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="top-actions">
+            <label class="search"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" /></svg
+              ><span class="sr-only" hidden>Tìm kiếm</span
+              ><input type="search" placeholder="Tìm kiếm…" aria-label="Tìm kiếm"
+            /></label>
+            <div class="notif-wrap">
+              <button class="icon-btn notif-btn-api" aria-label="Thông báo">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z" />
+                  <path d="M10 20a2 2 0 0 0 4 0" /></svg
+                ><i class="dot"></i>
+              </button>
+            </div>
+            <div class="user-menu">
+              <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+                <span class="avatar"></span><span class="name"><b>Đang tải…</b></span
+                ><svg class="ud-chev" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="user-dropdown" role="menu">
+                <div class="ud-head">
+                  <span class="avatar"></span>
+                  <div><b class="ud-name">Đang tải…</b><small class="ud-email"></small></div>
+                </div>
+                <a role="menuitem" href="login.html" class="ud-logout"
+                  ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"
+                    /></svg
+                  >Đăng xuất</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="page">
+          <section class="mat-hero page-hero">
+            <div class="ph-text">
+              <div class="eyebrow">QUẢN TRỊ</div>
+              <h1>Quản lý tài khoản</h1>
+              <div class="ph-row">
+                <p id="acSub">Tài khoản sinh viên và Giảng viên.</p>
+                <div class="ph-actions">
+                  <button class="btn" data-modal="importModal">
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 20V9M7 14l5-5 5 5M5 4h14" /></svg
+                    >Nhập từ Excel</button
+                  ><button class="btn primary" data-submit="newAccount">
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 5v14M5 12h14" /></svg
+                    >Thêm tài khoản
+                  </button>
+                </div>
+              </div>
+            </div>
+            <svg class="mh-art" viewBox="0 0 310 150" aria-hidden="true">
+              <defs>
+                <linearGradient id="hb1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#5AA8F0" />
+                  <stop offset="1" stop-color="#1E5FB8" />
+                </linearGradient>
+                <linearGradient id="hb2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#2F6FC4" />
+                  <stop offset="1" stop-color="#173F7E" />
+                </linearGradient>
+                <linearGradient id="hb3" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#8DBDF0" />
+                  <stop offset="1" stop-color="#5C97DD" />
+                </linearGradient>
+                <linearGradient id="hpg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#FFFFFF" />
+                  <stop offset="1" stop-color="#E6EFFA" />
+                </linearGradient>
+                <linearGradient id="hor" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#F7C25A" />
+                  <stop offset="1" stop-color="#EE9A2E" />
+                </linearGradient>
+                <linearGradient id="hlf" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0" stop-color="#BFD8F5" />
+                  <stop offset="1" stop-color="#E4EFFB" />
+                </linearGradient>
+              </defs>
+              <g fill="url(#hlf)">
+                <path d="M40 150c-6-30 6-58 30-72-4 26-12 50-30 72z" />
+                <path d="M28 150c-20-16-30-38-26-60 16 14 24 34 26 60z" />
+                <path d="M262 150c6-28-4-56-26-72 2 26 10 50 26 72z" />
+                <path d="M274 150c18-18 26-40 20-62-14 16-20 36-20 62z" />
+              </g>
+              <ellipse cx="155" cy="146" rx="100" ry="6" fill="#E3ECF7" />
+              <rect x="112" y="10" width="120" height="82" rx="14" fill="url(#hb3)" />
+              <rect x="82" y="40" width="128" height="98" rx="16" fill="url(#hb1)" />
+              <circle cx="120" cy="78" r="17" fill="#D8E9FA" />
+              <path d="M96 124a24 18 0 0 1 48 0" fill="#D8E9FA" />
+              <path
+                d="M158 72h36M158 88h26M158 104h32"
+                stroke="#173F7E"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+              <circle cx="226" cy="40" r="16" fill="url(#hor)" />
+              <path
+                d="M226 32v16M218 40h16"
+                stroke="#fff"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+            </svg>
+          </section>
+          <div class="seg-tabs" role="tablist" aria-label="Chế độ xem tài khoản">
+            <button class="seg-tab on" type="button" role="tab" data-ac-mode="all">
+              Tất cả tài khoản
+            </button>
+            <button class="seg-tab" type="button" role="tab" data-ac-mode="class">
+              Theo lớp học phần
+            </button>
+          </div>
+          <div id="acAll">
+            <div
+              class="grid"
+              style="grid-template-columns: repeat(3, 1fr); margin-bottom: 18px"
+              id="acKpis"
+            >
+              <div class="loading">
+                <span class="typing"><i></i><i></i><i></i></span> Đang tải…
+              </div>
+            </div>
+            <section class="card" style="padding: 0; overflow: hidden">
+              <div class="filters flat">
+                <label class="search" style="flex: 1; min-width: 220px"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7" />
+                    <path d="m20 20-3.5-3.5" /></svg
+                  ><input
+                    id="acQ"
+                    placeholder="Tên hoặc email…"
+                    aria-label="Tìm tài khoản" /></label
+                ><select id="acRole" aria-label="Vai trò">
+                  <option value="">Tất cả vai trò</option>
+                  <option value="student">Sinh viên</option>
+                  <option value="lecturer">Giảng viên</option></select
+                ><select id="acFac" aria-label="Khoa">
+                  <option value="">Tất cả khoa</option></select
+                ><select id="acStatus" aria-label="Trạng thái">
+                  <option value="">Mọi trạng thái</option>
+                  <option value="active">Hoạt động</option>
+                  <option value="locked">Đã khóa</option></select
+                ><span class="tiny muted" style="margin-left: auto" id="acCount"></span>
+              </div>
+              <div class="table-wrap" style="border: 0; border-radius: 0">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Người dùng</th>
+                      <th>Vai trò</th>
+                      <th>Khoa</th>
+                      <th>Trạng thái</th>
+                      <th>Hoạt động</th>
+                      <th style="text-align: right">Thao tác</th>
+                    </tr>
+                  </thead>
+                  <tbody id="acRows"></tbody>
+                </table>
+              </div>
+              <div class="between pager">
+                <button class="btn sm" id="acPrev">
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 12H5M11 6l-6 6 6 6" /></svg
+                  >Trước</button
+                ><span class="tiny muted" id="acPage"></span
+                ><button class="btn sm" id="acNext">
+                  Sau
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div id="acByClass" hidden>
+            <div class="abc">
+              <aside class="abc-side card">
+                <div class="abc-filters">
+                  <div id="abcSemWrap"></div>
+                  <label class="search"
+                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                      <circle cx="11" cy="11" r="7" />
+                      <path d="m20 20-3.5-3.5" /></svg
+                    ><input id="abcQ" placeholder="Tìm mã lớp, môn học…" aria-label="Tìm lớp"
+                  /></label>
+                </div>
+                <div id="abcList" class="abc-list"></div>
+              </aside>
+              <section class="abc-main card" id="abcDetail">
+                <div class="empty-note">Chọn một lớp học phần để xem giảng viên và sinh viên.</div>
+              </section>
+            </div>
+          </div>
+          <datalist id="facList"></datalist>
+          <div
+            class="modal"
+            id="addStudentsModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="addStudentsModal-t"
+          >
+            <div class="modal-card">
+              <div class="between modal-top">
+                <h2 id="addStudentsModal-t" class="modal-title">Thêm sinh viên vào lớp</h2>
+                <button
+                  class="btn sm icon-only"
+                  onclick="closeModal('addStudentsModal')"
+                  aria-label="Đóng"
+                >
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+              <div class="field">
+                <label for="asEmails">Email sinh viên (mỗi dòng một email)</label
+                ><textarea id="asEmails" rows="5" placeholder="11236004@st.neu.edu.vn"></textarea>
+              </div>
+              <p class="tiny muted" style="margin-top: 8px">
+                Sinh viên cần có tài khoản trong hệ thống. Thêm xong, lớp xuất hiện ở trang của sinh
+                viên.
+              </p>
+              <div class="modal-actions">
+                <button class="btn" onclick="closeModal('addStudentsModal')">Hủy</button
+                ><button class="btn primary" data-submit="addClassStudents">Thêm vào lớp</button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal"
+            id="changeLecturerModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="changeLecturerModal-t"
+          >
+            <div class="modal-card">
+              <div class="between modal-top">
+                <h2 id="changeLecturerModal-t" class="modal-title">Đổi giảng viên phụ trách</h2>
+                <button
+                  class="btn sm icon-only"
+                  onclick="closeModal('changeLecturerModal')"
+                  aria-label="Đóng"
+                >
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+              <div class="field">
+                <label for="clLecturer">Giảng viên mới</label
+                ><select id="clLecturer"></select>
+              </div>
+              <p class="tiny muted" style="margin-top: 8px">
+                Câu hỏi, tài liệu và danh sách sinh viên của lớp được giữ nguyên.
+              </p>
+              <div class="modal-actions">
+                <button class="btn" onclick="closeModal('changeLecturerModal')">Hủy</button
+                ><button class="btn primary" data-submit="changeClassLecturer">
+                  Đổi giảng viên
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal"
+            id="accountModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="accountModal-t"
+          >
+            <div class="modal-card">
+              <div class="between modal-top">
+                <h2 id="accountModal-t" class="modal-title">Thêm tài khoản</h2>
+                <button
+                  class="btn sm icon-only"
+                  onclick="closeModal('accountModal')"
+                  aria-label="Đóng"
+                >
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+              <input type="hidden" id="afId" />
+              <div class="form-grid">
+                <div class="field">
+                  <label for="afName">Họ và tên</label
+                  ><input id="afName" placeholder="VD: Nguyễn Văn A" />
+                </div>
+                <div class="field">
+                  <label for="afEmail">Email trường</label
+                  ><input id="afEmail" type="email" placeholder="ten@st.neu.edu.vn" />
+                </div>
+                <div class="field">
+                  <label for="afRole">Vai trò</label
+                  ><select id="afRole">
+                    <option value="student">Sinh viên</option>
+                    <option value="lecturer">Giảng viên</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="afFac">Khoa</label
+                  ><input id="afFac" list="facList" placeholder="VD: CNTT" />
+                </div>
+                <div class="field">
+                  <label for="afClass">Lớp hành chính (sinh viên)</label
+                  ><input id="afClass" placeholder="VD: Lớp hành chính" />
+                </div>
+              </div>
+              <p class="tiny muted" style="margin-top: 10px" id="afNote">
+                Hệ thống tạo mật khẩu tạm; người dùng nên đổi mật khẩu ở lần đăng nhập đầu tiên.
+              </p>
+              <div class="modal-actions">
+                <button class="btn" onclick="closeModal('accountModal')">Hủy</button
+                ><button class="btn primary" data-submit="saveAccount">Lưu</button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal"
+            id="importModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="importModal-t"
+          >
+            <div class="modal-card wide">
+              <div class="between modal-top">
+                <h2 id="importModal-t" class="modal-title">Nhập tài khoản từ Excel/CSV</h2>
+                <button
+                  class="btn sm icon-only"
+                  onclick="closeModal('importModal')"
+                  aria-label="Đóng"
+                >
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+              <ol class="steps">
+                <li>
+                  Tải file mẫu, điền các cột: full_name, email, role (Sinh viên/Giảng viên),
+                  faculty, admin_class.
+                </li>
+                <li>Chọn file đã điền để tải lên.</li>
+                <li>Xem kết quả và mật khẩu tạm của từng tài khoản.</li>
+              </ol>
+              <button class="btn sm" data-submit="downloadTemplate">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg
+                >Tải file mẫu (.csv)
+              </button>
+              <div class="field" style="margin-top: 14px">
+                <label for="imFile">File danh sách (.xlsx, .csv)</label
+                ><input id="imFile" type="file" accept=".xlsx,.csv" />
+              </div>
+              <div id="imResult"></div>
+              <div class="modal-actions">
+                <button class="btn" onclick="closeModal('importModal')">Đóng</button
+                ><button class="btn primary" data-submit="importAccounts">
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 20V9M7 14l5-5 5 5M5 4h14" /></svg
+                  >Nhập
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal"
+            id="pwModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="pwModal-t"
+          >
+            <div class="modal-card">
+              <div class="between modal-top">
+                <h2 id="pwModal-t" class="modal-title">Mật khẩu tạm</h2>
+                <button class="btn sm icon-only" onclick="closeModal('pwModal')" aria-label="Đóng">
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+              <p class="muted">
+                Gửi mật khẩu này cho người dùng. Mật khẩu chỉ hiển thị <b>một lần</b>.
+              </p>
+              <div class="pw-box" id="pwText"></div>
+              <div class="modal-actions">
+                <button class="btn primary" onclick="closeModal('pwModal')">Đã lưu lại</button>
+              </div>
+            </div>
+          </div>
+          <div class="toast" id="toast" role="status"></div>
+        </div>
+      </main>
+    </div>
+    <script src="assets/js/core/app.js?v=3.26"></script>
+    <script src="assets/js/core/api.js?v=3.26"></script>
+    <script src="assets/js/core/util.js?v=3.26"></script>
+    <script src="assets/js/shared/editor.js?v=3.26"></script>
+    <script src="assets/js/core/shell.js?v=3.26"></script>
+    <script src="assets/js/shared/classes.js?v=3.26"></script>
+    <script src="assets/js/shared/questions.js?v=3.26"></script>
+    <script src="assets/js/shared/ai-widget.js?v=3.26"></script>
+    <script src="assets/js/pages/admin/common.js?v=3.26"></script>
+    <script src="assets/js/pages/admin/accounts.js?v=3.26"></script>
+    <script src="assets/js/core/boot.js?v=3.26"></script>
+  </body>
+</html>

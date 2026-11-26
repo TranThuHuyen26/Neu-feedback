@@ -1,0 +1,342 @@
+/* ---------- 30. Tuần học (15 tuần) & tải tài liệu kéo thả ---------- */
+.week-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--ink-2);
+  margin: 0 0 14px;
+}
+.week-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.wk-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.wk-dot.done {
+  background: #94a3b8;
+}
+.wk-dot.current {
+  background: var(--accent);
+}
+.wk-dot.upcoming {
+  background: #fff;
+  border: 2px solid #cbd5e1;
+}
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.week-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  transition:
+    transform 0.2s var(--ease),
+    box-shadow 0.2s,
+    border-color 0.2s;
+  color: inherit;
+  min-height: 132px;
+}
+a.week-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: color-mix(in srgb, var(--accent) 35%, #fff);
+}
+.week-card .wk-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.week-card .wk-no {
+  font-weight: 800;
+  font-size: 15px;
+}
+.week-card .wk-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.week-card .wk-title.empty {
+  color: var(--muted);
+  font-weight: 500;
+  font-style: italic;
+}
+.week-card .wk-date {
+  font-size: 12px;
+  color: var(--muted);
+}
+.week-card .wk-stats {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.week-card .wk-stats b {
+  color: var(--ink-2);
+}
+.week-card .wk-stats .warn {
+  color: #9a4a07;
+  font-weight: 600;
+}
+.week-card.done {
+  background: #f8fafc;
+}
+.week-card.current {
+  border: 2px solid var(--accent);
+  box-shadow: 0 12px 26px -16px var(--accent);
+  background: linear-gradient(160deg, var(--accent-soft), #fff 70%);
+}
+.week-card.upcoming .wk-no {
+  color: var(--muted);
+}
+.wk-status {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.wk-status.done {
+  background: #eef1f5;
+  color: #475569;
+}
+.wk-status.current {
+  background: var(--accent);
+  color: #fff;
+}
+.wk-status.upcoming {
+  background: #fff;
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+.week-card .wk-act {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+.week-card .wk-act .btn {
+  height: 30px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.break-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--amber-soft);
+  color: #7c2d12;
+  font-size: 12.5px;
+  margin: 12px 8px 0 0;
+}
+.break-chip button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 700;
+}
+.timeline-banner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  border-radius: var(--r-lg);
+  background: linear-gradient(135deg, var(--accent-soft), #fff 80%);
+  border: 1.5px solid color-mix(in srgb, var(--accent) 30%, #fff);
+}
+.timeline-banner .tb-body {
+  flex: 1;
+  min-width: 0;
+}
+.timeline-banner h3 {
+  margin: 0 0 4px;
+}
+.wk-progress {
+  height: 8px;
+  border-radius: 99px;
+  background: #e6eaf1;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.wk-progress span {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: var(--accent);
+}
+.meta-row .wk-mini {
+  font-weight: 600;
+  color: var(--accent);
+}
+.week-head h1 {
+  font-size: 28px;
+}
+.week-content {
+  white-space: pre-line;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+.doc-group {
+  margin-bottom: 18px;
+}
+.doc-group h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+/* Khung kéo thả tải tài liệu */
+.upload-card h3 {
+  font-size: 16px;
+}
+.dropzone {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+  padding: 30px 20px;
+  border: 2px dashed #c9d1de;
+  border-radius: 14px;
+  background: var(--surface-2);
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+.dropzone:hover,
+.dropzone:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+.dropzone.drag {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.dropzone .dz-ico {
+  width: 40px;
+  height: 40px;
+  fill: none;
+  stroke: var(--ink-2);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.dropzone.drag .dz-ico {
+  stroke: var(--accent);
+}
+.dropzone b {
+  font-size: 14.5px;
+  color: var(--ink-2);
+}
+.dropzone span {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 520px;
+}
+.dz-files {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+.dz-file {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 13px;
+}
+.dz-file .ftype {
+  width: 34px;
+  height: 34px;
+  flex-basis: 34px;
+  font-size: 10px;
+}
+.dz-file b {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dz-file small {
+  color: var(--muted);
+  white-space: nowrap;
+}
+.dz-file .dz-state {
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.dz-file .dz-state.ok {
+  color: var(--green-ink);
+}
+.dz-file .dz-state.err {
+  color: var(--red-ink);
+}
+.dz-file .dz-state.warn {
+  color: #9a4a07;
+}
+.dz-file button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--muted);
+  line-height: 1;
+}
+.dz-file.bad {
+  border-color: #f4c7c3;
+  background: #fff8f7;
+}
+.dz-upload {
+  width: 100%;
+  margin-top: 14px;
+  height: 44px;
+}
+/* Câu trả lời tự động */
+.auto-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: #ede9fe;
+  color: #5b21b6;
+}
+.qreply.auto {
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+}
+.answered.auto {
+  background: #f5f3ff;
+}
+.answered.auto b {
+  color: #5b21b6;
+}

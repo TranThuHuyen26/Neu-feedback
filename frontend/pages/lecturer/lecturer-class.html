@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chi tiết lớp học | NEU Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#006E9F" />
+    <link rel="stylesheet" href="assets/css/style.css?v=3.26" />
+  </head>
+  <body class="lecturer" data-api>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="lecturer.html"
+          ><img
+            class="brandmark-img"
+            src="assets/images/neu-logo.png"
+            alt="Logo Trường Đại học Kinh tế Quốc dân"
+            width="44"
+            height="44"
+          />
+          <div><b>NEU Feedback</b><small>ĐH Kinh tế Quốc dân</small></div></a
+        >
+        <div>
+          <div class="nav-label">MENU</div>
+          <nav class="nav" aria-label="Điều hướng chính">
+            <a href="lecturer.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 10.5 12 3l9 7.5" />
+                  <path d="M5.5 9.5V21h13V9.5" />
+                  <path d="M9.5 21v-6h5v6" /></svg></span
+              ><span>Trang chủ</span></a
+            ><a class="active" aria-current="page" href="lecturer-classes.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m12 3 9 5-9 5-9-5z" />
+                  <path d="m3 13 9 5 9-5" /></svg></span
+              ><span>Lớp giảng dạy</span></a
+            ><a href="lecturer-materials.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z" />
+                  <path d="M14 3v5h5M9 13h6M9 17h4" /></svg></span
+              ><span>Tài liệu</span></a
+            ><a href="lecturer-stats.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg></span
+              ><span>Thống kê</span></a
+            >
+          </nav>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="top-actions">
+            <label class="search"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" /></svg
+              ><span class="sr-only" hidden>Tìm kiếm</span
+              ><input type="search" placeholder="Tìm kiếm…" aria-label="Tìm kiếm"
+            /></label>
+            <div class="notif-wrap">
+              <button class="icon-btn notif-btn-api" aria-label="Thông báo">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z" />
+                  <path d="M10 20a2 2 0 0 0 4 0" /></svg
+                ><i class="dot"></i>
+              </button>
+            </div>
+            <div class="user-menu">
+              <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+                <span class="avatar"></span><span class="name"><b>Đang tải…</b></span
+                ><svg class="ud-chev" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="user-dropdown" role="menu">
+                <div class="ud-head">
+                  <span class="avatar"></span>
+                  <div><b class="ud-name">Đang tải…</b><small class="ud-email"></small></div>
+                </div>
+                <a role="menuitem" href="profile.html?role=lecturer"
+                  ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 21a8 8 0 0 1 16 0" /></svg
+                  >Hồ sơ cá nhân</a
+                ><a role="menuitem" href="login.html" class="ud-logout"
+                  ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"
+                    /></svg
+                  >Đăng xuất</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="page">
+          <div class="pagehead">
+            <div>
+              <div class="eyebrow">Lớp giảng dạy</div>
+              <h1 id="lcTitle">…</h1>
+              <p id="lcMeta"></p>
+            </div>
+            <div class="actions">
+              <button class="btn" id="lcEdit">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 20h4L19 9l-4-4L4 16z" />
+                  <path d="m13.5 6.5 4 4" /></svg
+                >Sửa lớp</button
+              ><a class="btn" href="lecturer-classes.html"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 12H5M11 6l-6 6 6 6" /></svg
+                >Lớp giảng dạy</a
+              >
+            </div>
+          </div>
+          <div class="tabs" data-tabs="lc">
+            <button class="active" data-target="lc2" onclick="tabs(this, 'lc')">
+              Tuần học <span class="count">15</span></button
+            ><button data-target="lc4" onclick="tabs(this, 'lc')">
+              Sinh viên <span class="count" id="cStud">0</span></button
+            ><button data-target="lc5" onclick="tabs(this, 'lc')">Thống kê</button>
+          </div>
+          <section class="tab active" data-tabpage="lc" id="lc2">
+            <div id="lcBanner"></div>
+            <div class="week-list" id="weekGrid"></div>
+          </section>
+          <section class="tab" data-tabpage="lc" id="lc4">
+            <div class="between" style="margin-bottom: 14px">
+              <label class="search" style="width: 320px"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m20 20-3.5-3.5" /></svg
+                ><input
+                  data-live-search="#lcStudents tr"
+                  placeholder="Tìm sinh viên…"
+                  aria-label="Tìm sinh viên" /></label
+              ><button class="btn primary" data-modal="addStudentModal">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" /></svg
+                >Thêm sinh viên
+              </button>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Họ tên</th>
+                    <th>Email</th>
+                    <th>Lớp hành chính</th>
+                    <th>Ngày tham gia</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="lcStudents"></tbody>
+              </table>
+            </div>
+          </section>
+          <section class="tab" data-tabpage="lc" id="lc5">
+            <div id="lcStats">
+              <div class="loading">
+                <span class="typing"><i></i><i></i><i></i></span> Đang tải…
+              </div>
+            </div>
+          </section>
+          <div
+            class="modal"
+            id="renameModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="renameModal-t"
+          >
+            <div class="modal-card">
+              <div class="between modal-top">
+                <h2 id="renameModal-t" class="modal-title">Đổi tên tài liệu</h2>
+                <button
+                  class="btn sm icon-only"
+                  onclick="closeModal('renameModal')"
+                  aria-label="Đóng"
+                >
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+              <input type="hidden" name="materialId" id="rnId" />
+              <div class="field">
+                <label for="rnName">Tên tài liệu</label><input id="rnName" name="filename" />
+              </div>
+              <div class="modal-actions">
+                <button class="btn" onclick="closeModal('renameModal')">Hủy</button
+                ><button class="btn primary" data-submit="renameDoc">Lưu</button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal"
+            id="addStudentModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="addStudentModal-t"
+          >
+            <div class="modal-card">
+              <div class="between modal-top">
+                <h2 id="addStudentModal-t" class="modal-title">Thêm sinh viên vào lớp</h2>
+                <button
+                  class="btn sm icon-only"
+                  onclick="closeModal('addStudentModal')"
+                  aria-label="Đóng"
+                >
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+              <p class="muted">Sinh viên cũng có thể tự tham gia bằng mã <b id="joinHint"></b>.</p>
+              <div class="field">
+                <label for="addEmails">Email sinh viên</label
+                ><textarea
+                  id="addEmails"
+                  placeholder="Mỗi dòng một email, VD: sv@st.neu.edu.vn"
+                ></textarea>
+              </div>
+              <div class="modal-actions">
+                <button class="btn" onclick="closeModal('addStudentModal')">Hủy</button
+                ><button class="btn primary" data-submit="addStudents">Thêm</button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal"
+            id="classModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="classModal-t"
+          >
+            <div class="modal-card">
+              <div class="between modal-top">
+                <h2 id="classModal-t" class="modal-title">Tạo lớp học</h2>
+                <button
+                  class="btn sm icon-only"
+                  onclick="closeModal('classModal')"
+                  aria-label="Đóng"
+                >
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="ncCode">Tên lớp</label><input id="ncCode" placeholder="VD: KTPM_06" />
+                </div>
+                <div class="field">
+                  <label for="ncSubject">Môn học</label
+                  ><input id="ncSubject" placeholder="VD: Kiểm thử phần mềm" />
+                </div>
+              </div>
+              <div class="modal-actions">
+                <button class="btn" onclick="closeModal('classModal')">Hủy</button
+                ><button class="btn primary" data-submit="createClass">Tạo lớp</button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal"
+            id="editClassModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="editClassModal-t"
+          >
+            <div class="modal-card">
+              <div class="between modal-top">
+                <h2 id="editClassModal-t" class="modal-title">Sửa lớp học</h2>
+                <button
+                  class="btn sm icon-only"
+                  onclick="closeModal('editClassModal')"
+                  aria-label="Đóng"
+                >
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
+                </button>
+              </div>
+              <input type="hidden" name="classId" id="ecId" />
+              <div class="form-grid">
+                <div class="field">
+                  <label for="ecCode">Tên lớp</label><input id="ecCode" name="code" />
+                </div>
+                <div class="field">
+                  <label for="ecSubject">Môn học</label><input id="ecSubject" name="subject" />
+                </div>
+              </div>
+              <div class="field" style="margin-top: 14px">
+                <label for="ecJoin">Mã tham gia</label>
+                <div class="row" style="flex-wrap: nowrap">
+                  <input id="ecJoin" name="join_code" readonly style="flex: 1" /><button
+                    class="btn"
+                    type="button"
+                    data-submit="regenCode"
+                  >
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5" /></svg
+                    >Tạo mã mới
+                  </button>
+                </div>
+              </div>
+              <div class="modal-actions">
+                <button class="btn" onclick="closeModal('editClassModal')">Hủy</button
+                ><button class="btn primary" data-submit="saveClass">Lưu</button>
+              </div>
+            </div>
+          </div>
+          <div class="toast" id="toast" role="status"></div>
+        </div>
+        <div
+          class="modal"
+          id="titleModal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="titleModal-t"
+        >
+          <div class="modal-card">
+            <div class="between modal-top">
+              <h2 id="titleModal-t" class="modal-title">Sửa tiêu đề nội dung tuần</h2>
+              <button class="btn sm icon-only" onclick="closeModal('titleModal')" aria-label="Đóng">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 6l12 12M18 6 6 18" />
+                </svg>
+              </button>
+            </div>
+            <input type="hidden" id="ttId" />
+            <div class="field">
+              <label for="ttTitle">Tiêu đề</label
+              ><input
+                id="ttTitle"
+                maxlength="160"
+                placeholder="VD: Chương 2: Kiểm thử hộp trắng và hộp đen"
+              />
+            </div>
+            <div class="modal-actions">
+              <button class="btn" onclick="closeModal('titleModal')">Hủy</button
+              ><button class="btn primary" data-submit="saveTitle">Lưu</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="assets/js/core/app.js?v=3.26"></script>
+    <script src="assets/js/core/api.js?v=3.26"></script>
+    <script src="assets/js/core/util.js?v=3.26"></script>
+    <script src="assets/js/shared/editor.js?v=3.26"></script>
+    <script src="assets/js/core/shell.js?v=3.26"></script>
+    <script src="assets/js/shared/classes.js?v=3.26"></script>
+    <script src="assets/js/pages/lecturer/common.js?v=3.26"></script>
+    <script src="assets/js/pages/lecturer/class.js?v=3.26"></script>
+    <script src="assets/js/shared/questions.js?v=3.26"></script>
+    <script src="assets/js/shared/ai-widget.js?v=3.26"></script>
+    <script src="assets/js/core/boot.js?v=3.26"></script>
+  </body>
+</html>

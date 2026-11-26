@@ -1,0 +1,8 @@
+Ảnh nền trang đăng nhập
+=======================
+Hiện file neu-campus.jpg chỉ là nền màu tạm. Thay bằng ảnh trường NEU (ví dụ tòa A1, sảnh chính), giữ nguyên tên:  neu-campus.jpg
+
+- Nên dùng ảnh chính thức của trường hoặc ảnh bạn tự chụp, KHÔNG có logo/chữ đóng dấu của bên khác.
+- Kích thước gợi ý: rộng khoảng 1600 px, dung lượng dưới 500 KB.
+- Chưa có ảnh thì trang đăng nhập vẫn hiển thị nền màu xanh của trường.
+Sau khi đặt ảnh, mở lại trang đăng nhập và nhấn Ctrl + F5.

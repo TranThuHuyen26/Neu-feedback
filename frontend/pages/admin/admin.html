@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tổng quan | NEU Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#006E9F" />
+    <link rel="stylesheet" href="assets/css/style.css?v=3.26" />
+  </head>
+  <body class="admin" data-api>
+    <div class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="admin.html"
+          ><img
+            class="brandmark-img"
+            src="assets/images/neu-logo.png"
+            alt="Logo Trường Đại học Kinh tế Quốc dân"
+            width="44"
+            height="44"
+          />
+          <div><b>NEU Feedback</b><small>Quản trị</small></div></a
+        >
+        <div>
+          <div class="nav-label">MENU</div>
+          <nav class="nav" aria-label="Điều hướng chính">
+            <a class="active" aria-current="page" href="admin.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="9" rx="1.5" />
+                  <rect x="14" y="3" width="7" height="5" rx="1.5" />
+                  <rect x="14" y="12" width="7" height="9" rx="1.5" />
+                  <rect x="3" y="16" width="7" height="5" rx="1.5" /></svg></span
+              ><span>Tổng quan</span></a
+            ><a href="admin-accounts.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="9" cy="8" r="3.5" />
+                  <path
+                    d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M18 13.5a7 7 0 0 1 4 6.5"
+                  /></svg></span
+              ><span>Tài khoản</span></a
+            ><a href="admin-reports.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 21V4M5 4h12l-2 4 2 4H5" /></svg></span
+              ><span>Nội dung gắn cờ</span
+              ><span class="nav-count" id="navFlagCount" hidden>0</span></a
+            ><a href="admin-stats.html"
+              ><span class="nav-icon"
+                ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg></span
+              ><span>Thống kê</span></a
+            >
+          </nav>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="top-actions">
+            <label class="search"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" /></svg
+              ><span class="sr-only" hidden>Tìm kiếm</span
+              ><input type="search" placeholder="Tìm kiếm…" aria-label="Tìm kiếm"
+            /></label>
+            <div class="notif-wrap">
+              <button class="icon-btn notif-btn-api" aria-label="Thông báo">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z" />
+                  <path d="M10 20a2 2 0 0 0 4 0" /></svg
+                ><i class="dot"></i>
+              </button>
+            </div>
+            <div class="user-menu">
+              <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+                <span class="avatar"></span><span class="name"><b>Đang tải…</b></span
+                ><svg class="ud-chev" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="user-dropdown" role="menu">
+                <div class="ud-head">
+                  <span class="avatar"></span>
+                  <div><b class="ud-name">Đang tải…</b><small class="ud-email"></small></div>
+                </div>
+                <a role="menuitem" href="login.html" class="ud-logout"
+                  ><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"
+                    /></svg
+                  >Đăng xuất</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="page">
+          <div class="between ov-head">
+            <div>
+              <h1 style="margin: 0">Tổng quan</h1>
+              <p class="tiny muted" style="margin: 4px 0 0" id="adSummary">Đang tải…</p>
+            </div>
+            <div class="filter-row" style="margin: 0">
+              <label class="field-out"
+                ><span>Năm học</span
+                ><select id="adYear"></select
+              ></label>
+              <label class="field-out"
+                ><span>Học kỳ</span
+                ><select id="adSem"></select
+              ></label>
+            </div>
+          </div>
+          <div class="ov-todo" id="adTodo">
+            <div class="loading">
+              <span class="typing"><i></i><i></i><i></i></span> Đang tải…
+            </div>
+          </div>
+          <div class="ov-grid">
+            <section class="card">
+              <div class="between">
+                <h3 class="section-title" style="margin: 0">Tương tác 7 ngày gần nhất</h3>
+                <span class="ov-trend" id="adTrendLabel"></span>
+              </div>
+              <div id="adTrend"></div>
+            </section>
+            <section class="card">
+              <div class="between">
+                <h3 class="section-title" style="margin: 0">
+                  Nội dung gắn cờ chờ xử lý <span class="badge red" id="adFlagCount">0</span>
+                </h3>
+                <a class="tiny" href="admin-reports.html">Mở hàng đợi →</a>
+              </div>
+              <div class="plain-list" id="adFlags"></div>
+            </section>
+          </div>
+          <div class="ov-grid">
+            <section class="card">
+              <div class="between">
+                <h3 class="section-title" style="margin: 0">Lớp cần chú ý</h3>
+                <a class="tiny" href="admin-stats.html">Xem thống kê →</a>
+              </div>
+              <div class="plain-list" id="adAttention"></div>
+            </section>
+            <section class="card">
+              <h3 class="section-title" style="margin: 0">Hoạt động gần đây</h3>
+              <div class="activity" id="adActivity"></div>
+            </section>
+          </div>
+          <div class="toast" id="toast" role="status"></div>
+        </div>
+      </main>
+    </div>
+    <script src="assets/js/core/app.js?v=3.26"></script>
+    <script src="assets/js/core/api.js?v=3.26"></script>
+    <script src="assets/js/core/util.js?v=3.26"></script>
+    <script src="assets/js/shared/editor.js?v=3.26"></script>
+    <script src="assets/js/core/shell.js?v=3.26"></script>
+    <script src="assets/js/shared/classes.js?v=3.26"></script>
+    <script src="assets/js/shared/questions.js?v=3.26"></script>
+    <script src="assets/js/shared/ai-widget.js?v=3.26"></script>
+    <script src="assets/js/pages/admin/common.js?v=3.26"></script>
+    <script src="assets/js/pages/admin/home.js?v=3.26"></script>
+    <script src="assets/js/core/boot.js?v=3.26"></script>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+/* ---------- 4. Topbar ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 32px;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.crumbs,
+.top-context {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--muted);
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.crumbs svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+.crumbs b,
+.top-context b {
+  color: var(--ink);
+  font-weight: 650;
+}
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(360px, 34vw);
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 12px;
+  background: var(--bg);
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-size: 13.5px;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.search:focus-within {
+  background: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+.search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 13.5px;
+}
+input.search {
+  outline: 0;
+}
+.search svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+kbd,
+.kbd {
+  font-family: inherit;
+  font-size: 11px;
+  border: 1px solid #d5dae4;
+  border-radius: 6px;
+  padding: 1px 6px;
+  color: var(--muted);
+  background: #fff;
+}
+.icon-btn,
+.action-icon {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+.icon-btn:hover,
+.action-icon:hover {
+  background: #f1f4fa;
+  color: var(--accent);
+}
+.icon-btn svg,
+.action-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.icon-btn .dot {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 2px solid #fff;
+  animation: pop 0.5s var(--ease) 0.8s backwards;
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 10px 4px 4px;
+  border-radius: 999px;
+  transition: background 0.15s;
+}
+.user:hover {
+  background: #f1f4fa;
+}
+.user .name b {
+  display: block;
+  font-size: 13.5px;
+  line-height: 1.2;
+}
+.user .name small {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--coral-soft);
+  color: #a1401c;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+.lecturer .avatar {
+  background: var(--teal-soft);
+  color: var(--teal);
+}
+.admin .avatar {
+  background: var(--navy);
+  color: #fff;
+}

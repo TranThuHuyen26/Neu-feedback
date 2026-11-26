@@ -1,0 +1,49 @@
+/* ---------- 5. Page ---------- */
+.page,
+.content {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 30px 32px 56px;
+}
+.page > .between:first-child,
+.pagehead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.pagehead h1 {
+  margin: 0 0 4px;
+}
+.pagehead p {
+  margin: 0;
+  color: var(--muted);
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+div.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0 14px;
+}
+div.section-title h2 {
+  font-size: 18px;
+  margin: 0;
+}
+div.section-title p {
+  margin: 2px 0 0;
+}

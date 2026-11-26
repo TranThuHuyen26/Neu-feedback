@@ -1,0 +1,67 @@
+/* ===== 41. Tuần chưa học: tài liệu xem được ngay, chỉ khóa đặt câu hỏi ===== */
+.wsec-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #5b6479;
+  background: #f1f5f9;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-weight: 600;
+}
+.wsec-open .ico {
+  width: 14px;
+  height: 14px;
+}
+.side-docs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+.side-docs .wdoc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+.side-docs .wdoc:hover {
+  border-color: #9cc5da;
+  background: #f7fbfd;
+}
+.side-docs .wdoc > span:not(.fi) {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.side-docs .wdoc b {
+  font-size: 13px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.side-docs .wdoc small {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.side-docs .wdoc .ico {
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+#mtSize {
+  min-width: 76px;
+  padding-right: 30px !important;
+}

@@ -1,0 +1,103 @@
+/* ===== 36. Bản 3.4 — khung chi tiết cuộn liền một mạch · ô soạn thảo kiểu Word ===== */
+.live-md .detail {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+}
+.live-md .detail > .detail-body {
+  flex: 0 0 auto;
+  overflow: visible;
+}
+.live-md .detail > .reply {
+  flex: 0 0 auto;
+  position: static;
+  margin: 0 22px 22px;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--line-2);
+  background: transparent;
+}
+.reply-label {
+  font-size: 14px;
+}
+.ed-area {
+  position: relative;
+  min-height: 130px;
+  max-height: none;
+  padding: 12px 14px;
+  outline: none;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+  cursor: text;
+}
+.ed-area.is-empty::before {
+  content: attr(data-ph);
+  color: #94a3b8;
+  pointer-events: none;
+  position: absolute;
+}
+.ed-area p {
+  margin: 0 0 8px;
+}
+.ed-area p:last-child {
+  margin-bottom: 0;
+}
+.ed-area ul,
+.ed-area ol {
+  margin: 4px 0 8px;
+  padding-left: 24px;
+}
+.ed-area li {
+  margin: 2px 0;
+}
+.ed-area a {
+  color: #006e9f;
+  text-decoration: underline;
+}
+.ed-area img,
+.ed-area .ans-img {
+  max-width: 100%;
+  max-height: 360px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  margin: 6px 0;
+  display: block;
+}
+.ed-area h4 {
+  font-size: 14.5px;
+  margin: 6px 0;
+}
+.ed-tools {
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ed-tools button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.ed-tools button .ico {
+  width: 17px;
+  height: 17px;
+}
+.ed-tools button.on {
+  background: #dcebf5;
+  color: #006e9f;
+}
+.ed-tools button[data-ed="ul"] {
+  margin-left: 6px;
+  border-left: 0;
+}
+.ed-tools button[data-ed="ul"]::before,
+.ed-tools button[data-ed="link"]::before {
+  content: "";
+  display: none;
+}
+.ab-body .md,
+.ans-block .md {
+  font-size: 14.5px;
+}

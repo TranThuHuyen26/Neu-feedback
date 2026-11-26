@@ -1,0 +1,315 @@
+/* ---------- 25. Vòng chỉnh sửa v3.2 ---------- */
+/* NEU AI nổi bật trên trang chủ sinh viên */
+.ai-feature {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--r-xl);
+  padding: 24px;
+  color: #fff;
+  background: #121a33;
+  box-shadow: 0 24px 48px -24px rgba(18, 26, 51, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ai-feature-glow {
+  position: absolute;
+  z-index: -1;
+  width: 260px;
+  height: 260px;
+  right: -90px;
+  top: -90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0, rgba(47, 91, 234, 0) 70%);
+  opacity: 0.9;
+  animation: float 7s ease-in-out infinite;
+}
+.ai-feature::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -60px;
+  bottom: -80px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 122, 89, 0.45) 0, rgba(255, 122, 89, 0) 70%);
+}
+.ai-feature-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ai-feature-ico {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: var(--accent);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 24px -8px var(--accent);
+  animation: float 5s ease-in-out infinite;
+}
+.ai-feature-ico svg {
+  width: 26px;
+  height: 26px;
+  fill: #ffd166;
+}
+.ai-feature .badge {
+  background: rgba(255, 255, 255, 0.12);
+  color: #cff5df;
+}
+.ai-feature h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 4px 0 0;
+}
+.ai-feature p {
+  margin: 0;
+  color: #c9d2ea;
+  font-size: 14px;
+}
+.ai-feature-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ai-feature-chips a {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 13.5px;
+  color: #fff;
+  transition:
+    background 0.2s,
+    transform 0.2s var(--ease);
+}
+.ai-feature-chips a:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateX(4px);
+}
+.ai-feature-ask {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 14px;
+  background: #fff;
+}
+.ai-feature-ask input {
+  flex: 1;
+  min-width: 0;
+  border: 0 !important;
+  box-shadow: none !important;
+  height: 40px;
+  background: transparent;
+}
+.ai-feature-ask .btn {
+  min-height: 40px;
+  width: 44px;
+  padding: 0;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.ai-feature-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0.9;
+}
+.ai-feature-link:hover .ico {
+  transform: translateX(3px);
+}
+/* Thẻ lớp của giảng viên */
+a.course {
+  color: inherit;
+}
+.course-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-2);
+}
+/* Thẻ KPI có icon */
+.kpi-card {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 16px !important;
+}
+.kpi-card::after {
+  display: none !important;
+}
+.kpi-ico {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+}
+.kpi-ico svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.kpi-card .kpi {
+  margin: 0;
+  font-size: 26px;
+}
+/* Biểu đồ cột chồng theo phiên */
+.stackbars {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  height: 240px;
+  padding: 30px 6px 0;
+  border-bottom: 1px solid var(--line);
+  margin-top: 10px;
+}
+.sb {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+.sb small {
+  position: absolute;
+  bottom: -26px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.sb-col {
+  position: relative;
+  width: 100%;
+  max-width: 56px;
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 10px 10px 4px 4px;
+  overflow: visible;
+  transform-origin: bottom;
+  animation: growy 0.9s var(--ease) backwards;
+}
+.sb-a {
+  display: block;
+  width: 100%;
+  background: var(--accent);
+  border-radius: 0 0 4px 4px;
+}
+.sb-w {
+  display: block;
+  flex: 1;
+  background: var(--amber);
+  border-radius: 10px 10px 0 0;
+}
+.sb-col em {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+.sb:hover .sb-a {
+  filter: brightness(1.1);
+}
+.stackbars + * {
+  margin-top: 30px;
+}
+.panel .stackbars {
+  margin-bottom: 28px;
+}
+.spark {
+  width: 100%;
+  height: 90px;
+  overflow: visible;
+}
+.spark .line {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1600;
+  animation: draw 2s var(--ease) 0.3s backwards;
+}
+/* Kho tài liệu */
+.share {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--ink-2);
+}
+.share-ico {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.share-ico .ico {
+  width: 15px;
+  height: 15px;
+  vertical-align: 0;
+}
+.btn.icon-only {
+  width: 36px;
+  padding: 0;
+}
+/* Khóa / mở khóa tài khoản */
+.lock-btn {
+  color: var(--red-ink);
+  border-color: #f3c4bf;
+  background: #fff7f6;
+}
+.lock-btn:hover {
+  background: var(--red-soft);
+  border-color: var(--red);
+  color: var(--red-ink);
+}
+.lock-btn.unlock {
+  color: var(--green-ink);
+  border-color: #bfe6cf;
+  background: #f3fbf6;
+}
+.lock-btn.unlock:hover {
+  background: var(--green-soft);
+  border-color: var(--green);
+  color: var(--green-ink);
+}
+tr.is-locked td {
+  color: var(--muted);
+}
+tr.is-locked b {
+  color: var(--muted);
+}
+.admin .user {
+  cursor: default;
+}
+.admin .user:hover {
+  background: transparent;
+}
+.kpi-card {
+  display: flex !important;
+}

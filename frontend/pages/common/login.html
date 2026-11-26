@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Đăng nhập | NEU Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#006E9F" />
+    <link rel="stylesheet" href="assets/css/style.css?v=3.26" />
+  </head>
+  <body class="login-page">
+    <main class="login-layout">
+      <section class="login-intro">
+        <img
+          class="login-logo"
+          src="assets/images/neu-logo.png"
+          alt="Logo Trường Đại học Kinh tế Quốc dân"
+        />
+        <p class="eyebrow" style="color: #fff; margin-top: 28px; opacity: 0.85">
+          TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN
+        </p>
+        <h1>Hệ thống phản hồi ẩn danh tích hợp AI</h1>
+        <p>
+          Không gian hỗ trợ tương tác lớp học, phản hồi ẩn danh và tra cứu kiến thức dành cho sinh
+          viên, Giảng viên NEU.
+        </p>
+        <p class="login-foot">
+          © Trường Đại học Kinh tế Quốc dân · 207 Giải Phóng, Hai Bà Trưng, Hà Nội
+        </p>
+      </section>
+      <section class="login-card">
+        <div class="eyebrow">NEU Feedback</div>
+        <h2>Đăng nhập</h2>
+        <form onsubmit="return demoLogin(event);">
+          <div class="field">
+            <label>Email trường</label
+            ><input id="email" type="email" required placeholder="example@st.neu.edu.vn" />
+          </div>
+          <div class="field">
+            <label>Mật khẩu</label><input type="password" required placeholder="Nhập mật khẩu" />
+          </div>
+          <div class="login-row">
+            <label><input type="checkbox" /> Ghi nhớ đăng nhập</label
+            ><a href="#" data-modal="forgotModal">Quên mật khẩu?</a>
+          </div>
+          <button class="btn primary full">Đăng nhập</button>
+        </form>
+        <p class="small muted" style="text-align: center; margin-top: 20px">
+          Đại học Kinh tế Quốc dân
+        </p>
+      </section>
+    </main>
+    <div
+      class="modal"
+      id="forgotModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="forgotModal-t"
+    >
+      <div class="modal-card">
+        <div class="between modal-top">
+          <h2 id="forgotModal-t" class="modal-title">Quên mật khẩu</h2>
+          <button class="btn sm icon-only" onclick="closeModal('forgotModal')" aria-label="Đóng">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+        <p class="muted">Nhập email trường, hệ thống sẽ gửi liên kết đặt lại mật khẩu.</p>
+        <div class="field">
+          <label for="fe">Email trường</label
+          ><input id="fe" type="email" placeholder="example@st.neu.edu.vn" />
+        </div>
+        <div class="modal-actions">
+          <button class="btn" onclick="closeModal('forgotModal')">Hủy</button
+          ><button
+            class="btn primary"
+            data-save="forgotModal"
+            data-done="Đã gửi liên kết đặt lại mật khẩu"
+          >
+            Gửi liên kết
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/core/app.js?v=3.26"></script>
+    <script src="assets/js/core/api.js?v=3.26"></script>
+    <script src="assets/js/core/util.js?v=3.26"></script>
+    <script src="assets/js/shared/editor.js?v=3.26"></script>
+    <script src="assets/js/core/shell.js?v=3.26"></script>
+    <script src="assets/js/pages/common/login.js?v=3.26"></script>
+    <script src="assets/js/core/boot.js?v=3.26"></script>
+  </body>
+</html>

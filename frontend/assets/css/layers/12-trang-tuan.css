@@ -1,0 +1,424 @@
+/* ---------- 33. Bản 3.1 ---------- */
+/* Thanh trên cùng: tìm kiếm bên trái, chuông + người dùng sát phải */
+.topbar .top-actions {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+.topbar .top-actions .search {
+  margin-right: auto;
+}
+/* Trang tuần: khối đầu trang kiểu "trang phiên" */
+.week-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 20px;
+  padding: 24px 28px;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.week-hero::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+}
+.week-hero .wh-main {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+.wh-crumb {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.78);
+}
+.wh-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0 4px;
+  flex-wrap: wrap;
+}
+.wh-title h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #fff;
+  line-height: 1.15;
+}
+.wh-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+.wh-pill::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7ee2a8;
+}
+.wh-pill.done::before {
+  background: #cbd5e1;
+}
+.wh-pill.upcoming::before {
+  background: #fde68a;
+}
+.wh-sub {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+}
+.wh-nav {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+.wh-nav .btn {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+.wh-nav .btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.wh-nav .btn.light {
+  background: #fff;
+  color: var(--accent);
+  border-color: #fff;
+}
+.wh-nav .btn.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+/* Khung Thông tin tuần (giống "Thông tin phiên") */
+.week-info h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+.week-info .wi-content {
+  padding: 0 0 12px;
+  border-bottom: 1px solid var(--line-2);
+  margin-bottom: 4px;
+}
+.week-info .wi-content span {
+  display: block;
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-bottom: 3px;
+}
+.week-info .wi-content b {
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.week-info .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line-2);
+  font-size: 13.5px;
+}
+.week-info .wi-content + .info-row {
+  border-top: 0;
+}
+.week-info .info-row span {
+  color: var(--muted);
+}
+.week-info .info-row b {
+  text-align: right;
+  font-weight: 600;
+}
+.week-info .info-row .link {
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  font-size: 13.5px;
+}
+/* Danh sách tuần dạng mục (giống trang học tập trực tuyến) */
+.week-list {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.wsec {
+  padding: 16px 22px;
+  border-bottom: 1px solid #e6eef3;
+  position: relative;
+}
+.wsec:last-child {
+  border-bottom: 0;
+}
+.wsec.current {
+  background: #f1f8fc;
+  box-shadow: inset 4px 0 0 var(--accent);
+}
+.wsec.locked {
+  opacity: 0.5;
+}
+.wsec-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+.wsec-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  line-height: 1.35;
+}
+a.wsec-title:hover {
+  text-decoration: underline;
+}
+.wsec.locked .wsec-title {
+  color: var(--muted);
+}
+.wsec-date {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.wsec-now {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  background: var(--accent);
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-left: 8px;
+  vertical-align: 2px;
+}
+.wsec-side {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  font-size: 12.5px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.wsec-side .warn {
+  color: #b45309;
+  font-weight: 600;
+}
+.wsec-docs {
+  margin: 10px 0 0 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.wdoc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  padding: 2px 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+.wdoc:hover span:last-child {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.fi {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.fi.pdf {
+  background: #fdecec;
+  color: #b42318;
+}
+.fi.doc {
+  background: #e6f0fb;
+  color: #1d5fa8;
+}
+.fi.ppt {
+  background: #fdf0e1;
+  color: #b4540a;
+}
+.fi.txt {
+  background: #eef1f5;
+  color: #475569;
+}
+.wsec-empty {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: 8px 0 0 4px;
+}
+/* Bộ lọc kiểu trang đào tạo của trường: nhãn nằm trên viền */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 4px 0 22px;
+}
+.field-out {
+  position: relative;
+  display: block;
+  min-width: 220px;
+}
+.field-out span {
+  position: absolute;
+  left: 12px;
+  top: -8px;
+  padding: 0 6px;
+  background: var(--bg, #f5f7fb);
+  font-size: 12px;
+  color: var(--muted);
+  z-index: 1;
+}
+.field-out select {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #c9d3dd;
+  border-radius: 10px;
+  padding: 10px 38px 8px 14px;
+  font-size: 15px;
+  color: var(--ink);
+  background: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m7 10 5 5 5-5z' fill='%23555'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  cursor: pointer;
+}
+.field-out select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+/* Thống kê: thanh theo lớp & Giảng viên */
+.hbar {
+  display: grid;
+  grid-template-columns: 110px 1fr 70px;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 13px;
+}
+.hbar .hb-track {
+  height: 14px;
+  border-radius: 99px;
+  background: #eef2f6;
+  overflow: hidden;
+  display: flex;
+}
+.hbar .hb-track i {
+  display: block;
+  height: 100%;
+}
+.hbar b {
+  font-weight: 600;
+}
+.hbar .hb-num {
+  text-align: right;
+  color: var(--muted);
+}
+.lect-row {
+  padding: 12px 0;
+  border-top: 1px solid var(--line-2);
+}
+.lect-row:first-child {
+  border-top: 0;
+}
+.lect-row .lr-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.lect-row .lr-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.rate-bar {
+  height: 8px;
+  border-radius: 99px;
+  background: #eef2f6;
+  margin-top: 8px;
+  overflow: hidden;
+}
+.rate-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+}
+th[data-sort] {
+  cursor: pointer;
+  user-select: none;
+}
+th[data-sort]:hover {
+  color: var(--accent);
+}
+th[data-sort].asc::after {
+  content: " ▲";
+  font-size: 10px;
+}
+th[data-sort].desc::after {
+  content: " ▼";
+  font-size: 10px;
+}
+.stackbars .sb-col.future .sb-label {
+  color: #b6c2cc;
+}
+.day-picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 6px;
+}
+.day-picks label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+.qlist .qr-st {
+  background: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}

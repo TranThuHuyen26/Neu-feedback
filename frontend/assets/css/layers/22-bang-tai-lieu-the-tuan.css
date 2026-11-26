@@ -1,0 +1,291 @@
+/* ===== 43. Bản 3.6 ===== */
+/* Bảng tài liệu của tuần: cột cố định, tên dài cắt "…" — nút thao tác không bị đẩy ra ngoài */
+.d2-table table {
+  table-layout: fixed;
+}
+.d2-table .fname {
+  min-width: 0;
+}
+.d2-table .fname b {
+  max-width: none;
+  flex: 1;
+  min-width: 0;
+}
+.d2-table td:nth-child(2),
+.d2-table td:nth-child(3) {
+  white-space: nowrap;
+}
+.d2-table th {
+  white-space: nowrap;
+}
+.d2-table .mat-actions {
+  gap: 6px;
+}
+/* Thông báo: tải thêm khi cuộn */
+.notif-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+  padding: 10px;
+}
+/* Danh sách tuần học dạng thẻ (có tài liệu bên dưới) */
+.week-list {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+}
+.wk-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.wk-head .grow {
+  flex: 1;
+  min-width: 220px;
+}
+.wk-head b {
+  font-size: 17px;
+  display: block;
+}
+.wk-head small {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.wk-hico {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #eaf3f9;
+  color: #006e9f;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.wk-hico .ico {
+  width: 22px;
+  height: 22px;
+}
+.wk-head .wk-search {
+  width: 260px;
+  height: 40px;
+}
+.wk-head select {
+  height: 40px;
+  width: auto;
+  min-width: 170px;
+}
+.wk-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wk-card {
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+  background: #fff;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.wk-card:hover {
+  border-color: #bfdceb;
+  box-shadow: 0 8px 20px -16px rgba(15, 23, 42, 0.35);
+}
+.wk-card.current {
+  background: #f2f8fc;
+  border-color: #bfdceb;
+  box-shadow: inset 3px 0 0 #006e9f;
+}
+.wk-row {
+  display: grid;
+  grid-template-columns: 62px 150px minmax(0, 1fr) 96px 190px 36px;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  color: inherit;
+  text-decoration: none;
+}
+.wk-no {
+  background: #eef4f8;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px 0;
+  line-height: 1.1;
+}
+.wk-no small {
+  display: block;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.wk-no b {
+  font-size: 18px;
+  color: #0f3d5e;
+}
+.wk-card.current .wk-no {
+  background: #dcebf5;
+}
+.wk-card.current .wk-no b {
+  color: #006e9f;
+}
+.wk-dt {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.wk-tt {
+  min-width: 0;
+}
+.wk-tt b {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wk-tt b i {
+  font-weight: 500;
+  color: var(--muted);
+}
+.wk-tt small {
+  font-size: 12.5px;
+  color: #94a3b8;
+}
+.wk-st {
+  justify-self: start;
+  font-size: 12.5px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+.wk-st.done {
+  background: #e3f6ec;
+  color: #127245;
+}
+.wk-st.current {
+  background: #dcebfa;
+  color: #1d5fa8;
+}
+.wk-st.upcoming {
+  background: #f1f5f9;
+  color: #475569;
+}
+.wk-q {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wk-q .ico {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+.wk-q.warn {
+  color: #c2410c;
+  font-weight: 600;
+}
+.wk-q.ok {
+  color: #127245;
+}
+.wk-go {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: #006e9f;
+  background: #fff;
+}
+.wk-go .ico {
+  width: 16px;
+  height: 16px;
+}
+.wk-docs {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 14px 12px 90px;
+  margin-top: -2px;
+}
+.wk-doc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: none;
+  padding: 5px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13.5px;
+  color: var(--ink-2);
+  max-width: 100%;
+}
+.wk-doc:hover {
+  background: #eef4f8;
+  color: #006e9f;
+}
+.wk-doc .fi {
+  width: 26px;
+  height: 26px;
+  flex-basis: 26px;
+  font-size: 8.5px;
+}
+.wk-doc span:not(.fi) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wk-more {
+  align-self: flex-start;
+  border: 0;
+  background: none;
+  color: #006e9f;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+@media (max-width: 1180px) {
+  .wk-row {
+    grid-template-columns: 56px minmax(0, 1fr) 92px 34px;
+  }
+  .wk-dt,
+  .wk-q {
+    display: none;
+  }
+  .wk-docs {
+    padding-left: 84px;
+  }
+}
+.wk-doc[hidden],
+.wk-card[hidden] {
+  display: none !important;
+}
+.wk-docs {
+  padding-left: 248px;
+}
+@media (max-width: 1180px) {
+  .wk-docs {
+    padding-left: 80px;
+  }
+}
+@media (max-width: 1280px) {
+  .docs2 {
+    grid-template-columns: 1fr;
+  }
+}

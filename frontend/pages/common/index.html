@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <title>NEU Feedback</title>
+    <script>
+      var u = null;
+      try {
+        u = JSON.parse(localStorage.getItem("neu_user") || "null");
+      } catch (e) {}
+      location.replace(
+        u && localStorage.getItem("neu_token")
+          ? { student: "student.html", lecturer: "lecturer.html", admin: "admin.html" }[u.role] ||
+              "login.html"
+          : "login.html",
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

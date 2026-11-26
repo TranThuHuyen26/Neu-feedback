@@ -1,0 +1,331 @@
+/* ===== 42. Bản 3.5 ===== */
+/* Ô nhập khi bấm vào: viền xanh nhạt, mảnh, quầng sáng rất nhẹ */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #9cc5da !important;
+  box-shadow: 0 0 0 3px rgba(0, 110, 159, 0.07) !important;
+  outline: none;
+}
+.field-out select:focus {
+  border-color: #9cc5da !important;
+  box-shadow: 0 0 0 3px rgba(0, 110, 159, 0.07) !important;
+}
+.editor:focus-within {
+  border-color: #9cc5da !important;
+  box-shadow: 0 0 0 3px rgba(0, 110, 159, 0.07) !important;
+}
+.page label.search:focus-within,
+.search:focus-within {
+  border-color: #9cc5da !important;
+  box-shadow: 0 0 0 3px rgba(0, 110, 159, 0.07) !important;
+}
+.page label.search input:focus,
+.search input:focus {
+  box-shadow: none !important;
+}
+/* Kho tài liệu: ô tìm */
+.mat-filters .mt-q {
+  flex: 1 1 320px;
+  max-width: 460px;
+}
+.mat-filters .mt-q label.search {
+  height: 44px;
+}
+/* NEU AI nút nổi */
+.ai-chat {
+  width: min(420px, calc(100vw - 24px)) !important;
+  height: min(600px, calc(100vh - 130px));
+  max-height: none !important;
+}
+.ai-chat .ai-head {
+  gap: 8px;
+}
+.ai-chat .ai-head b {
+  flex: 1;
+}
+.ai-chat .ai-head .btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 9px;
+}
+.fai-cls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line-2);
+  background: #fff;
+}
+.fai-cls label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.fai-cls select {
+  flex: 1;
+  height: 38px;
+  font-size: 13.5px;
+  min-width: 0;
+}
+.ai-chat .ai-body {
+  min-height: 0;
+}
+.ai-body .ai {
+  line-height: 1.55;
+}
+.ai-body .ai .md p {
+  margin: 0 0 6px;
+}
+.fai-day {
+  align-self: center;
+  font-size: 11.5px;
+  color: #94a3b8;
+  margin: 2px 0;
+}
+.fai-src {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.fai-src button {
+  border: 0;
+  background: #eef4f8;
+  color: #006e9f;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11.5px;
+  cursor: pointer;
+}
+.fai-att {
+  font-size: 11.5px;
+  opacity: 0.85;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.fai-att .ico {
+  width: 13px;
+  height: 13px;
+}
+.fai-sg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.fai-sg button {
+  border: 1px dashed #9cc5da;
+  background: #fff;
+  color: #006e9f;
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.fai-sg button:hover {
+  background: #eef6fb;
+}
+.ai-chat .ai-compose input {
+  height: 40px;
+}
+/* Lớp học của tôi: thẻ tự gọn khi hẹp */
+.hcard {
+  container-type: inline-size;
+}
+.hcard-body > div > span {
+  min-width: 0;
+}
+@container (max-width:300px) {
+  .hcard-body {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .hcard-body > div + div {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--line-2);
+    padding-top: 8px;
+  }
+}
+/* Nhóm đã trả lời */
+.grp-ans {
+  margin-top: 12px;
+  background: #fff;
+}
+/* Câu hỏi có định dạng */
+.md-q {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+.md-q ul,
+.md-q ol {
+  margin: 4px 0 8px;
+  padding-left: 22px;
+}
+.q-md {
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin: 6px 0;
+}
+.q-md ul,
+.q-md ol {
+  margin: 4px 0;
+  padding-left: 22px;
+}
+.q-md p {
+  margin: 0 0 4px;
+}
+.q-files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 10px;
+}
+.q-file {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px 10px 5px 6px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.q-file .fi {
+  width: 26px;
+  height: 26px;
+  flex-basis: 26px;
+  font-size: 8.5px;
+}
+.att-row small {
+  margin-right: auto;
+  white-space: nowrap;
+}
+.att-card .att-row + .att-row {
+  margin-top: 8px;
+}
+/* Ô đặt câu hỏi của sinh viên (giống ô của Giảng viên) */
+.ask-editor {
+  margin-top: 14px;
+}
+.ask-editor .ed-area {
+  min-height: 140px;
+}
+.ask-editor.drag {
+  border-color: #006e9f;
+  background: #f7fbfd;
+}
+.ed-sep {
+  width: 1px;
+  height: 20px;
+  background: #dde3ec;
+  margin: 0 6px;
+}
+.ed-tools .ed-attach {
+  width: auto !important;
+  padding: 0 10px !important;
+  gap: 6px;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.ed-tools .ed-attach .ico {
+  width: 16px;
+  height: 16px;
+}
+.ed-tools .ed-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: #94a3b8;
+  padding-right: 6px;
+}
+.ed-tools .ed-count.over {
+  color: #b42318;
+  font-weight: 700;
+}
+.ed-tools button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.ask-files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  border-top: 1px dashed var(--line);
+}
+.ask-file {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 5px 6px 5px 6px;
+  font-size: 12.5px;
+  background: #fff;
+  max-width: 100%;
+}
+.ask-file .fi {
+  width: 26px;
+  height: 26px;
+  flex-basis: 26px;
+  font-size: 8.5px;
+}
+.ask-file b {
+  font-weight: 500;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ask-file small {
+  color: var(--muted);
+}
+.ask-file button {
+  border: 0;
+  background: none;
+  font-size: 16px;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+.ask-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+#askArea .ed-area[contenteditable="false"] {
+  background: #f8fafc;
+}
+#allClasses.hgrid,
+#recentClasses.hgrid,
+#homeClasses.hgrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+@media (max-width: 860px) {
+  #allClasses.hgrid,
+  #recentClasses.hgrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 600px) {
+  #allClasses.hgrid,
+  #recentClasses.hgrid {
+    grid-template-columns: 1fr !important;
+  }
+}
+.hcard-body > div:first-child > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}

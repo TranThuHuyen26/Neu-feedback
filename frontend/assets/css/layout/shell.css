@@ -1,0 +1,219 @@
+/* ---------- 3. Shell ---------- */
+.shell,
+.app {
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr);
+  min-height: 100vh;
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: var(--surface);
+  border-right: 1px solid var(--line);
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  overflow-y: auto;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px;
+}
+.brand b {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.brand small {
+  display: block;
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.3;
+}
+.brandmark {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: 0 8px 18px -8px var(--accent);
+}
+.nav-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #8a93a6;
+  padding: 0 12px;
+  margin: 0 0 6px;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 12px;
+  color: var(--ink-2);
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    background 0.18s,
+    color 0.18s,
+    transform 0.18s var(--ease);
+}
+.nav a:hover {
+  background: #f1f4fa;
+  color: var(--ink);
+  transform: translateX(3px);
+}
+.nav a.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 650;
+}
+.nav a.active::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 10px;
+  bottom: 10px;
+  width: 4px;
+  border-radius: 0 4px 4px 0;
+  background: var(--accent);
+}
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 20px;
+}
+.nav-icon svg,
+.ui-icon svg,
+.ico {
+  width: 19px;
+  height: 19px;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.nav-count {
+  margin-left: auto;
+  min-width: 22px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 7px;
+  background: var(--accent-2);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+.sidebar-foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebar-foot .nav a {
+  min-height: 40px;
+  font-size: 13.5px;
+}
+.profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-2);
+}
+.profile b {
+  display: block;
+  font-size: 13.5px;
+}
+.profile small {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Admin sidebar tối */
+.admin .sidebar {
+  background: var(--night);
+  border-right: 0;
+  color: #c5cce0;
+}
+.admin .brand b {
+  color: #fff;
+}
+.admin .brand small {
+  color: #a9b3cf;
+}
+.admin .brandmark {
+  background: var(--amber);
+  color: var(--night);
+  box-shadow: 0 8px 18px -8px rgba(242, 169, 59, 0.7);
+}
+.admin .nav-label {
+  color: #7d88a8;
+}
+.admin .nav a {
+  color: #c5cce0;
+}
+.admin .nav a:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+.admin .nav a.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.admin .nav a.active::before {
+  background: var(--amber);
+}
+.admin .nav-count {
+  background: var(--amber);
+  color: var(--night);
+}
+.admin .profile {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: transparent;
+}
+.admin .profile b {
+  color: #fff;
+}
+.admin .profile small {
+  color: #a9b3cf;
+}
+.admin .profile .avatar {
+  background: var(--amber);
+  color: var(--night);
+}
+
+.main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
